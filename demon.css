@@ -16,10 +16,18 @@ body {
   height: auto;
 }
 
+.carousel {
+    font-family: 'Merienda', cursive;
+}
+
+.container {
+  font-family: 'Merienda', cursive;
+}
+
 /* Barre Menu */
 #menu {
   line-height: 100%;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: #ffffff;
   height: auto !important;
   width: 100% !important;
 }
@@ -36,8 +44,15 @@ body {
   font-size: 1rem;
 }
 
+#textNavButton {
+  background-color: rgba(242, 38, 19, 0.25)
+}
+
 @media screen and (max-width:991px){
   .imgNavBar{
+    display:none;
+  }
+  .bd-example{
     display:none;
   }
 }
@@ -46,7 +61,11 @@ body {
 background-color: rgba(0, 0, 0, 0.85);
 }
 
-/*  */
+
+
+
+
+/* home.html */
 
 .rem {
   height:1rem;
@@ -55,6 +74,18 @@ background-color: rgba(0, 0, 0, 0.85);
 .card {
     font-family: 'Merienda', cursive;
 }
+
+#more {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+h3 {
+  color: red;
+}
+
+
+
 
 
 /* CSS du Footer */
@@ -74,16 +105,15 @@ footer {
 
 .footer-legis {
 font-size: 0.9rem;
-margin-bottom: 1rem;
+margin-bottom: 0.1rem;
 margin-top: 0;
 }
 
-
-
-hr.footerHR {
-  background-color: rgb(171, 63, 44);
-  width: 60px;
+.footer-copyright {
+  color: #020B40;
+  background-color: #F27405
 }
+
 
 li {
   list-style: none;
@@ -94,6 +124,14 @@ li {
 
 
 /* ***** Links ******/
+a {
+  color: #020B40;
+}
+
+a.link {
+  color: #FFF;
+  text-decoration: none;
+}
 
 a.footerText {
   color: #FFF;
@@ -125,7 +163,7 @@ position:absolute;
 }
 
 hr {
-  background-color: rgb(238, 83, 17);
-  width: 60px;
+  background-color: #F27405;
+  width: 10em;
   height: 1px;
 }

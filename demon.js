@@ -18,6 +18,22 @@ app.config(['$routeProvider',
         templateUrl:'goodies.html',
         controller: 'articlesCtrl'
       })
+      .when('/conditions',{
+        templateUrl:'conditions.html'
+
+      })
+      .when('/legal',{
+        templateUrl:'legal.html'
+
+      })
+      .when('/retract',{
+        templateUrl:'retract.html'
+
+      })
+      .when('/delivery',{
+        templateUrl:'delivery.html'
+
+      })
       .otherwise({
         templateURL: 'home.html'
       });

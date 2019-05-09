@@ -1,0 +1,17 @@
+/* CSS de la page d'accueil */
+body {
+  /* Code pour que l'image reste fixe et responsive */
+  margin: 0;
+  padding: 0;
+  background: url(images/fond.jpg) no-repeat center fixed;
+  -webkit-background-size: cover;
+  /* pour anciens Chrome et Safari */
+  background-size: cover;
+  /* version standardisée */
+}
+
+.img-fluid {
+  /* A utiliser avec class="img-fluid" à appliquer à chaque image déclarée dans le html, pour que toutes les images soient responsives */
+  max-width: 100%;
+  height: auto;
+}

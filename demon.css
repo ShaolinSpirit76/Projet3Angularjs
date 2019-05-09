@@ -3,7 +3,7 @@ body {
   /* Code pour que l'image reste fixe et responsive */
   margin: 0;
   padding: 0;
-  background: url(images/fond.jpg) no-repeat center fixed;
+  background: url(images/.jpg) no-repeat center fixed;
   -webkit-background-size: cover;
   /* pour anciens Chrome et Safari */
   background-size: cover;
@@ -14,4 +14,108 @@ body {
   /* A utiliser avec class="img-fluid" à appliquer à chaque image déclarée dans le html, pour que toutes les images soient responsives */
   max-width: 100%;
   height: auto;
+}
+
+/* Barre Menu */
+#menu {
+  line-height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  height: auto !important;
+  width: 100% !important;
+}
+
+.nav-link {
+  font-family: 'Merienda', cursive;
+  color: black;
+  font-size: 1rem;
+  text-align: center;
+}
+
+#textNavButton {
+  font-family: 'Merienda', cursive;
+  font-size: 1rem;
+}
+
+@media screen and (max-width:991px){
+  .imgNavBar{
+    display:none;
+  }
+}
+
+.carousel-caption {
+background-color: rgba(0, 0, 0, 0.85);
+}
+
+
+/* CSS du Footer */
+
+footer {
+  width: 100%;
+  height: auto;
+  color: rgb(255, 255, 255);
+  background-color: rgb(40, 36, 35);
+}
+
+
+.footer-title {
+  font-size: 0.98rem;
+  font-weight: 700;
+}
+
+.footer-legis {
+font-size: 0.9rem;
+margin-bottom: 1rem;
+margin-top: 0;
+}
+
+
+
+hr.footerHR {
+  background-color: rgb(171, 63, 44);
+  width: 60px;
+}
+
+li {
+  list-style: none;
+}
+
+
+
+
+
+/* ***** Links ******/
+
+a.footerText {
+  color: #FFF;
+  text-decoration: none;
+}
+
+
+/************* SEPARATOR *************/
+.separator {
+  background-color: #666;
+  height: .06em;
+  margin-bottom: .7em;
+}
+
+
+.map-responsive {
+overflow:hidden;
+padding-bottom:56.25%;  /*aspect ratio 16:9 ==> 9/16x100 = 56.25*/
+position:relative;
+height:0;
+}
+
+.map-responsive iframe {
+left:0;
+top:0;
+height:100%;
+width:100%;
+position:absolute;
+}
+
+hr {
+  background-color: rgb(238, 83, 17);
+  width: 60px;
+  height: 1px;
 }

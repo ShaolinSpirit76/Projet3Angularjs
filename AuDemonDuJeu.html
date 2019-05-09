@@ -18,55 +18,82 @@
   <link href="" rel="stylesheet">
   <!-- Lien pour placer une icone dans l'onglet, avant le titre de la page -->
   <link rel="icon" href="images/iconeDemon.png">
+  <!-- CDN de AngularJs -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+  <!-- Pour utiliser la fonction ng-message d'AngularJs -->
+  <script src="https://code.angularjs.org/1.7.8/angular-messages.min.js"></script>
+  <!-- Script permettant d'afficher automatiquement tous les formats en français (au lieu du US) -->
+  <script src="https://code.angularjs.org/1.7.8/i18n/angular-locale_fr-fr.js"></script>
   <!-- Ng Route -->
   <script src="https://code.angularjs.org/1.7.8/angular-route.min.js"></script>
   <!-- Titre de la page affiché dans l'onglet -->
   <title>Au démon du jeu</title>
 
 </head>
-
 <body>
 
   <!-- Début du header -->
   <div id="head">
 
 
-    <!-- Début de l'entête titre pro -->
-
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-<a class="navbar-brand" href="#"><img src="images/logo.png" class="img-fluid" alt="logo du démon du jeu" width="40%" height="40%" /></a>
-<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-  <span class="navbar-toggler-icon"></span>
-</button>
+      <a class="navbar-brand" href="#"><img src="images/logo.png" class="img-fluid" alt="logo du démon du jeu" width="40%" height="40%" /></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-<div class="collapse navbar-collapse" id="navbarSupportedContent">
-  <ul class="navbar-nav mr-auto">
-    <li class="nav-item active">
-      <a class="nav-link" href="#">Jeu de rôle<span class="sr-only"></span></a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Jeu de société</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Goodies</a>
-    </li>
-    </ul>
-  <form class="form-inline my-2 my-lg-0">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Panier</button>
-  </form>
-</div>
-</nav>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#!/kids">Jeux pour enfants<span class="sr-only"></span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#!/boardGame">Jeux de société</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#!/goodies">Goodies</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+            Panier
+          </button>
+        </form>
+      </div>
+    </nav>
 
-      <!-- <div class="ml-auto">
+    <!-- <div class="ml-auto">
   <img src="images/logo.png" class="img-fluid" alt="logo du démon du jeu" width="20%" height="20%" />
 </div> -->
 
 
   </div>
   <!-- Fin du header -->
+  <div ng-view></div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div ng-repeat="articles in articles">
 
 
-
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
   <!-- CDN JavaScript toujours à la fin du body pour éviter les bug -->
@@ -76,12 +103,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <!-- Et enfin le CDN de Bootstrap.js -->
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  <!-- CDN de AngularJs -->
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
-  <!-- Pour utiliser la fonction ng-message d'AngularJs -->
-  <script src="https://code.angularjs.org/1.7.8/angular-messages.min.js"></script>
-  <!-- Script permettant d'afficher automatiquement tous les formats en français (au lieu du US) -->
-  <script src="https://code.angularjs.org/1.7.8/i18n/angular-locale_fr-fr.js"></script>
+
   <!-- Sweet alert 2 -->
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
   <!-- Lien avec la page JS (toujours après les CDN de JQuery/AngularJs) -->

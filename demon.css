@@ -15,3 +15,7 @@ body {
   max-width: 100%;
   height: auto;
 }
+
+.rem{
+  height:3rem;
+}

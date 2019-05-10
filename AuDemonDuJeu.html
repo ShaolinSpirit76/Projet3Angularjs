@@ -65,16 +65,14 @@
           </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
-      <button class="btn btn-success my-2 my-sm-0 text-white mx-auto" type="submit"><i class="fas fa-shopping-cart"></i>
-Panier</button>
-    </form>
+          <button class="btn btn-success my-2 my-sm-0 text-white mx-auto" type="submit"><i class="fas fa-shopping-cart"></i>
+            Panier</button>
+        </form>
       </div>
     </nav>
     <!-- Fin de la navbar -->
 
-
     <!-- Début du caroussel -->
-
     <div class="bd-example">
       <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -132,113 +130,102 @@ Panier</button>
       <span class="sr-only">Next</span>
     </a>
   </div>
-</div>
+  </div>
 
 
-<!-- Fin du caroussel -->
+  <!-- Fin du caroussel -->
 
   </div>
   <!-- Fin du header -->
 
-<div ng-view>
-</div>
+  <div ng-view>
+  </div>
 
   <!-- Footer -->
-<footer>
-  <!--Footer Links-->
-  <div class="container mt-5 mb-4 text-center text-md-left">
+  <footer>
+    <!--Footer Monster-->
+
     <div class="row">
-      <div class="col-12 text-center">
-        <p><i class="fab fa-optin-monster fa-3x"></i></p>
+
+      <div class="col-12 mx auto text-center separatorDemon mt-4">
+        <p><i class="fab fa-optin-monster fa-3x color-red"></i></p>
+      </div>
+    </div>
+
+
+    <div class="container mt-5 mb-4 text-center text-md-left">
+      <div class="row mt-3">
+
+        <!--Boutique column-->
+        <div class="text-center col-12 col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
+          <h6 class="footer-title">Le démon du jeu</h6>
+          <hr class="mb-4 mt-0 d-inline-block mx-auto" />
+
+          <!--Google Map-->
+          <div class="map-responsive">
+            <iframe id="map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2591.624923988113!2d0.10635953213743149!3d49.491591685329794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e02f21edc39467%3A0x2488e4f62f905774!2s140+Rue+Victor+Hugo%2C+76600+Le+Havre!5e0!3m2!1sfr!2sfr!4v1557408396151!5m2!1sfr!2sfr"
+              width="300" height="275" frameborder="0" style="border:0" allowfullscreen></iframe>
+          </div>
+          <!--/.Google Map-->
+
+        </div>
+        <!--/.Boutique column-->
+
+        <!--Info column-->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto" id="infoColumn">
+          <h6 class="footer-title">Autres Informations</h6>
+          <hr class="mb-4 mt-0 d-inline-block mx-auto" />
+          <p>
+            <i class="fas fa-home fa-2x mr-2 footer-legis"></i> 140, rue Victor Hugo
+            <i class="fas fa-home fa-2x mr-2 footer-legis"> 76600, Le Havre</i></p>
+            <p>
+              <i class="fas fa-envelope fa-2x mr-2 footer-legis"></i><a href="https://m.me/LEDEMONDUJEU?fbclid=IwAR1SN_3Z134QRe23Fe6OEOWy72IOe_UF1JigW3Pti5rSS681qOuk_FZvXyA">Me contacter</a></p>
+            <p>
+              <i class="fas fa-phone fa-2x mr-2 footer-legis"></i>+ 33 2 35 41 71 91</p>
+            <p>
+              <a href="https://www.facebook.com/LEDEMONDUJEU?fref=ts"><i class="fab fa-facebook fa-2x mr-2 footer-legis"></i>Visitez ma page</a></p>
+        </div>
+        <!--/.Info column-->
+
+        <!--Mentions column-->
+        <div class="text-center col-12 col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
+          <h6 class="footer-title">Mentions Légales</h6>
+          <hr class="mb-4 mt-0 d-inline-block mx-auto" />
+          <li class="footer-legis mb-4 mt-0"><a href="#!/conditions">Conditions Générales de Vente</a></li>
+          <li class="footer-legis mb-4 mt-0"><a href="#!/delivery">Livraison et tarifs</a></li>
+          <li class="footer-legis mb-4 mt-0"><a href="#!/retract">Retour de produits</a></li>
+          <li class="footer-legismb-4 mt-0"><a href="#!/legal">Mentions Légales</a></li>
+        </div>
+        <!--/.Mentions column-->
+
+
+        <!--Paiement-->
+        <div class="text-center col-12 col-md-3 col-lg-3 col-xl-3">
+          <h6 class="footer-title">Vos moyens de paiement :</h6>
+          <hr class="mt-0 d-inline-block" />
+          <p>
+            <i class="fab fa-cc-mastercard fa-3x" title="Master Card" aria-hidden="true"></i>
+            <i class="fab fa-cc-visa fa-3x" title="Visa"></i>
+            <i class="fab fa-cc-paypal fa-3x" title="Paypal"></i><a href="https://www.paypal.com/fr/signin"></a></p>
+          <div class="rem"></div>
+        </div>
 
       </div>
     </div>
-    <div class="row mt-3">
+    <!--/.Paiement-->
 
-      <!--First column-->
-      <div class="text-center col-12 col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
-        <h6 class="footer-title">Le démon du jeu</h6>
-        <hr class="mb-4 mt-0 d-inline-block mx-auto" />
-
-        <!--Google Map-->
-         <div class="map-responsive">
-         <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2591.624923988113!2d0.10635953213743149!3d49.491591685329794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e02f21edc39467%3A0x2488e4f62f905774!2s140+Rue+Victor+Hugo%2C+76600+Le+Havre!5e0!3m2!1sfr!2sfr!4v1557408396151!5m2!1sfr!2sfr" width="300" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
-         </div>
- <!--/.Google Map-->
-
-      </div>
-      <!--/.First column-->
-
-      <!--Fourth column-->
-      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto">
-          <h6 class="footer-title">Autres Informations</h6>
-        <hr class="mb-4 mt-0 d-inline-block mx-auto" />
-        <p>
-          <i class="fas fa-home  mr-3"></i> 140 Rue Victor Hugo, 76600</p>
-        <p>
-          <i class="fas fa-envelope mr-3"></i> audemon@dujeu.com</p>
-        <p>
-          <i class="fas fa-phone mr-3"></i> + 33 76 78 88</p>
-        <p>
-          <i class="fas fa-print mr-3"></i> + 33 76 79 89</p>
-      </div>
-      <!--/.Fourth column-->
-
-      <!--Second column-->
-      <div class="text-center col-12 col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
-        <h6 class="footer-title">Mentions Légales</h6>
-        <hr class="mb-4 mt-0 d-inline-block mx-auto" />
-        <li class="footer-legis"><a href="#!/conditions">Conditions Générales de Vente</a></li>
-        <li class="footer-legis"><a href="#!/delivery">Livraison et tarifs</a></li>
-        <li class="footer-legis"><a href="#!/retract">Retour de produits</a></li>
-        <li class="footer-legis"><a href="#!/legal">Mentions Légales</a></li>
-      </div>
-      <!--/.Second column-->
+    <!--/.Fourth column-->
 
 
+    <!--/.Footer Links-->
 
-      <!--Third column-->
-      <div class="text-center col-12 col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
-        <h6 class="footer-title">Autres Informations</h6>
-        <hr class="mb-4 mt-0 d-inline-block mx-auto" />
-        <p>
-          <i class="fas fa-home  mr-3"></i> 140, rue Victor Hugo, 76600, Le Havre</p>
-        <p>
-          <i class="fas fa-envelope mr-3"></i><a href="https://m.me/LEDEMONDUJEU?fbclid=IwAR1SN_3Z134QRe23Fe6OEOWy72IOe_UF1JigW3Pti5rSS681qOuk_FZvXyA">Me contacter</a></p>
-        <p>
-          <i class="fas fa-phone mr-3"></i> + 33 2 35 41 71 91</p>
-      </div>
-      <!--/.Fourth column-->
-
-
-  <!--/.Footer Links-->
-
-  <!--Paiement-->
-
-
-        <div class="text-center col-12 col-md-3 col-lg-3 col-xl-3">
-        <h6 class="footer-title">Vos moyens de paiement :</h6>
-        <hr class="mt-0 d-inline-block" />
-        <p>
-          <i class="fab fa-cc-mastercard fa-3x" title="Master Card" aria-hidden="true"></i>
-          <i class="fab fa-cc-visa fa-3x" title="Visa"></i>
-          <i class="fab fa-cc-paypal fa-3x" title="Paypal"></i></p>
-        <div class="rem"></div>
-      </div>
-
-          </div>
-</div>
-  <!--/.Paiement-->
-
-  <!-- Copyright -->
-  <div class="footer-copyright text-center py-3 w-100 text-white font-weight-bolder">Une réalisation : Paul, Damien, Dorian et Martin de La Manu.
-  </div>
-  <!-- Copyright -->
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3 w-100 text-white font-weight-bolder">© 2019 Copyright | Paul, Damien, Dorian et Martin de LaManu.</div>
+    <!-- Copyright -->
 
   </footer>
   <!--/.Footer-->
-
-
 
 
 

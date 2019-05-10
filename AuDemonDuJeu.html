@@ -145,6 +145,28 @@
   </div>
 
 
+<!-- Modal avertissement ajout d'un article -->
+
+<div id="infoModal" class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title text-center">Vous avez bien ajouté cet article au panier.</h4>
+        <p><br />
+          <i class="far fa-smile-wink fa-3x" title="Merci !"></i>
+        </p>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="keepShopping btn btn-secondary" data-dismiss="modal">Continuer mes achats</button>
+        <button type="button" data-toggle="modal" data-target="#cartModal" class="pay btn btn-primary">Voir mon panier</button>
+      </div>
+    </div>
+  </div>
+</div>
+
   <!-- Modal panier -->
 
   <!-- Modal -->
@@ -155,7 +177,7 @@
           <div class="mx-auto">
             <h4 class="modal-title text-center font-weight-bolder" id="exampleModalLabel">Votre panier</h4>
             <hr class="mb-4 mt-0 d-inline-block text-center" />
-            <div id="deliver" class="text-white mr-auto">Livraison gratuite en France métropolitaine
+            <div id="deliver" class="text-white text-center">Livraison gratuite en France métropolitaine
               à partir de 65€ d'achats. Profitez-en !</div>
             <p><hr class="mb-4 mt-0 d-inline-block mx-auto" /></p>
           </div>
@@ -164,16 +186,20 @@
           </button>
         </div>
                 <div class="modal-body">
-          <ul>
-            <li></li>
-          </ul>
+                  <ul>
+               <li class="modal-body" ng-repeat="product in cart"><img src={{product.img}} title={{product.name}} alt = {{product.name}} style = "width:50%;"/> <button ng-click="remove(product)" type="button" name="button"><i class="fas fa-times"></i></button> <h3>{{product.name}}</h3>{{product.ref}} {{product.quantity}} {{product.price}} {{product.totalPrice}}
+                 <button ng-click="oneLess(product)" type="button" name="button">-</button>
+                 <button ng-click="oneMore(product)" type="button" name="button">+</button>
+               </li>
+
+       </ul>
         </div>
         <div class="modal-body">
 <p><hr class="mb-4 mt-0 d-inline-block mx-auto" /></p>
           <label for="country" class="ml-auto larger">Frais de port : </label>
 
 
-          <select name="country" id="country">
+          <select name="country" id="country" title="Choisissez votre région">
             <optgroup label="Nord-Ouest">Nord-Ouest</option>
               <option value="Normandie">Normandie</option>
               <option value="Bretagne">Bretagne</option>
@@ -205,8 +231,8 @@
         </div>
 
         <div class="modal-footer">
-          <button id="keepShopping" type="button" class="btn btn-secondary" data-dismiss="modal">Continuer mes achats</button>
-          <button id="pay" type="button" class="btn btn-primary">Valider ma commande</button>
+          <button type="button" class="keepShopping btn btn-secondary" data-dismiss="modal">Continuer mes achats</button>
+          <button type="button" class="pay btn btn-primary">Valider ma commande</button>
         </div>
       </div>
     </div>

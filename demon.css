@@ -93,8 +93,7 @@ h3 {
 
 h4 {
   color: #020B40;
-  background-color: #F27405;
-}
+  }
 
 /* CSS du panier */
 #cartModal {
@@ -118,12 +117,12 @@ h4 {
   /* version standardisée */
 }
 
-#keepShopping {
+.keepShopping {
   background-color: #F27405;
   color: #020B40;
 }
 
-#pay {
+.pay {
   background-color: #020B40;
   color: #F27405;
 }

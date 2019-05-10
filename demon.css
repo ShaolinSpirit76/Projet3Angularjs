@@ -11,6 +11,11 @@ body {
   font-family: 'Merienda', cursive;
 }
 
+#panier {
+  color: #F27405;
+  background-color: #020B40;
+}
+
 .img-fluid {
   /* A utiliser avec class="img-fluid" à appliquer à chaque image déclarée dans le html, pour que toutes les images soient responsives */
   max-width: 100%;
@@ -18,7 +23,7 @@ body {
 }
 
 .carousel {
-    font-family: 'Merienda', cursive;
+  font-family: 'Merienda', cursive;
 }
 
 .container {
@@ -31,6 +36,11 @@ body {
   background-color: #ffffff;
   height: auto !important;
   width: 100% !important;
+  -moz-box-shadow: 0px 12px 15px 0px #000000;
+  -webkit-box-shadow: 0px 12px 15px 0px #000000;
+  -o-box-shadow: 0px 12px 15px 0px #000000;
+  box-shadow: 0px 12px 15px 0px #000000;
+  filter: progid:DXImageTransform.Microsoft.Shadow(color=#000000, Direction=180, Strength=15);
 }
 
 .nav-link {
@@ -49,31 +59,27 @@ body {
   background-color: rgba(242, 38, 19, 0.25)
 }
 
-@media screen and (max-width:991px){
-  .imgNavBar{
-    display:none;
+@media screen and (max-width:991px) {
+  .imgNavBar {
+    display: none;
   }
-  .bd-example{
-    display:none;
+
+  .bd-example {
+    display: none;
   }
 }
 
 .carousel-caption {
-background-color: rgba(0, 0, 0, 0.85);
+  background-color: rgba(0, 0, 0, 0.85);
 }
 
-
-
-
-
 /* home.html */
-
 .rem {
-  height:1rem;
+  height: 1rem;
 }
 
 .card {
-    font-family: 'Merienda', cursive;
+  font-family: 'Merienda', cursive;
 }
 
 #more {
@@ -85,85 +91,151 @@ h3 {
   color: red;
 }
 
+h4 {
+  color: #020B40;
+  background-color: #F27405;
+}
 
+/* CSS du panier */
+#cartModal {
+  margin: 0;
+  padding: 0;
+  background: url(images/fondCart3.jpg) no-repeat center fixed;
+  -webkit-background-size: cover;
+  /* pour anciens Chrome et Safari */
+  background-size: cover;
+  /* version standardisée */
+}
 
+#wallPaperModal {
+  margin: 0;
+  padding: 0;
+  /* background: url(images/backCart2.jpg) no-repeat center fixed; */
+  background-color: rgba(255, 255, 255, 0.85);
+  -webkit-background-size: cover;
+  /* pour anciens Chrome et Safari */
+  background-size: cover;
+  /* version standardisée */
+}
 
+#keepShopping {
+  background-color: #F27405;
+  color: #020B40;
+}
+
+#pay {
+  background-color: #020B40;
+  color: #F27405;
+}
+
+#deliver {
+  background-color: rgba(2, 11, 64, 0.75);
+}
 
 /* CSS du Footer */
-
 footer {
   width: 100%;
   height: auto;
 }
 
-
 .footer-title {
-  font-size: 0.98rem;
+  font-size: 0.9rem;
+  color: #020B40;
   font-weight: 700;
 }
 
 .footer-legis {
-font-size: 0.9rem;
-margin-bottom: 0.1rem;
-margin-top: 0;
+  font-size: 0.8rem;
+  color: #020B40;
+  margin-bottom: 0.1rem;
+  margin-top: 0;
+}
+
+#infoColumn {
+  font-size: 0.8rem;
+  color: #020B40;
+}
+
+#map {
+  border-radius: 8%;
+}
+
+.fa-transparent {
+  color: transparent;
 }
 
 .footer-copyright {
+  font-size: 0.8rem;
   color: #020B40;
-  background-color: #ff8c00;
+  background-color: #F27405;
   font-family: 'Merienda', cursive;
 }
-
 
 li {
   list-style: none;
 }
 
-
-
-
-
 /* ***** Links ******/
 a {
+  text-decoration: none;
   color: #020B40;
 }
 
-a.link {
-  color: #FFF;
-  text-decoration: none;
+a:visited {
+  color: #020B40;
 }
 
-a.footerText {
-  color: #FFF;
+a:hover, a:focus, a:active {
   text-decoration: none;
+  color: #F27405;
 }
 
+/* Google Map Responsive */
+.map-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  /*aspect ratio 16:9 ==> 9/16x100 = 56.25*/
+  position: relative;
+  height: 0;
+}
 
-/************* SEPARATOR *************/
+.map-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+/*Separator Demon Footer*/
+.separatorDemon {
+  background: linear-gradient(to right, #F27405, transparent, #F27405);
+  height: 10%;
+  width: 100%;
+}
+
 .separator {
-  background-color: #666;
+  background-color: #000000;
   height: .06em;
   margin-bottom: .7em;
 }
 
-
-.map-responsive {
-overflow:hidden;
-padding-bottom:56.25%;  /*aspect ratio 16:9 ==> 9/16x100 = 56.25*/
-position:relative;
-height:0;
-}
-
-.map-responsive iframe {
-left:0;
-top:0;
-height:100%;
-width:100%;
-position:absolute;
+.separationMenu {
+  clear: both;
+  position: absolute;
+  margin-top: 10px;
+  margin-left: 250px;
+  height: 200px;
+  width: 5px;
+  background: black;
 }
 
 hr {
   background-color: #F27405;
   width: 10em;
   height: 1px;
+}
+
+#fafa {
+  color: white;
 }

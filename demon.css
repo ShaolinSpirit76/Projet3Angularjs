@@ -16,10 +16,18 @@ body {
   height: auto;
 }
 
+.carousel {
+    font-family: 'Merienda', cursive;
+}
+
+.container {
+  font-family: 'Merienda', cursive;
+}
+
 /* Barre Menu */
 #menu {
   line-height: 100%;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: #ffffff;
   height: auto !important;
   width: 100% !important;
 }
@@ -36,8 +44,15 @@ body {
   font-size: 1rem;
 }
 
+#textNavButton {
+  background-color: rgba(242, 38, 19, 0.25)
+}
+
 @media screen and (max-width:991px){
   .imgNavBar{
+    display:none;
+  }
+  .bd-example{
     display:none;
   }
 }
@@ -47,13 +62,37 @@ background-color: rgba(0, 0, 0, 0.85);
 }
 
 
+
+
+
+/* home.html */
+
+.rem {
+  height:1rem;
+}
+
+.card {
+    font-family: 'Merienda', cursive;
+}
+
+#more {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+h3 {
+  color: red;
+}
+
+
+
+
+
 /* CSS du Footer */
 
 footer {
   width: 100%;
   height: auto;
-  color: rgb(255, 255, 255);
-  background-color: rgb(40, 36, 35);
 }
 
 
@@ -70,7 +109,8 @@ margin-top: 0;
 
 .footer-copyright {
   color: #020B40;
-  background-color: #F27405
+  background-color: #ff8c00;
+  font-family: 'Merienda', cursive;
 }
 
 

@@ -2,7 +2,7 @@
 [{
     "name": "Orbis",
     "img": "images/orbis1.jpg",
-    "description": "ORBIS se range dans la famille des \"Gateway Games\" : des jeux simples à expliquer, rapides à jouer, mais difficiles à maîtriser.",
+    "description": "ORBIS se range dans la famille des  \" Gateway Games \"  : des jeux simples à expliquer, rapides à jouer, mais difficiles à maîtriser.",
     "ref": "09258",
     "price": "29,90€",
     "category": "boardgames"
@@ -21,7 +21,7 @@
     "price": "45,00€",
     "category": "boardgames"
 }, {
-    "name": "Pillards De La Mer Du Nord",
+    "name": "Pillards Mer Du Nord",
     "img": "images/pillards1.jpg",
     "description": "Pillards de la Mer du Nord se déroule pendant l'âge d'or des Vikings. Les joueurs incarnent des guerriers vikings qui vont chercher à impressionner le Jarl (Chef de Clan).",
     "ref": "08260",
@@ -42,14 +42,14 @@
     "price": "59,90€",
     "category": "boardgames"
 }, {
-    "name": "La Quête Des Terres Du Milieu",
+    "name": "Quête Des Terres Du Mil...",
     "img": "images/terresDuMilieu1.jpg",
     "description": "Voici l'un des grands jeux de cette fin d'année! Le destin des Terres du Milieu est entre vos mains !",
     "ref": "03473",
     "price": "64,90€",
     "category": "boardgames"
 }, {
-    "name": "Le Trône De Fer : Jeu De Plateau",
+    "name": "Le Trône De Fer",
     "img": "images/troneDeFer1.jpg",
     "description": "Plongez dans un jeu de luttes d'influence, de conquêtes de territoires, et de diplomatie dans le monde du Trône de Fer.",
     "ref": "03708",
@@ -98,70 +98,70 @@
     "price": "25,00€",
     "category": "kids"
 }, {
-    "name": "Bazar Bizarre - Le Chapeau Fantome",
+    "name": "Bazar Bizarre",
     "img": "images/bazarBizarre1.jpg",
     "description": "Au milieu de ce grand bazar, une erreur est vite arrivée... Ne passez pas à côté de ce grand opus de la série !",
     "ref": "06886",
     "price": "19,90€",
     "category": "kids"
 }, {
-    "name": "Maitre Renard",
+    "name": "Maître Renard",
     "img": "images/maitreRenard1.jpg",
     "description": "Prouvez votre valeur en accomplissant les missions que vous confiera l'illustre roublard et en ramenant le plus gros butin possible de la ferme voisine !",
     "ref": "05515",
     "price": "25,90€",
     "category": "kids"
 }, {
-    "name": "Game Of Thrones Night's King On Viserion",
+    "name": "Game Of Thrones \"Night's King On Viserion\"",
     "img": "images/pop1.jpg",
     "description": "Caractéristiques : Figurine en vinyle grande taille env. 15 cm, en emballage boîte-fenêtre.",
     "ref": "08465",
     "price": "45,00€",
     "category": "goodies"
 }, {
-    "name": "Game Of Thrones Jon Snow",
+    "name": "Game Of Thrones \"Jon Snow\"",
     "img": "images/pop2.jpg",
     "description": "Caractéristiques : Figurine en vinyle taille env. 9 cm, en emballage boîte-fenêtre.",
     "ref": "05669",
     "price": "14,90€",
     "category": "goodies"
 }, {
-    "name": "Game Of Thrones Daenerys Targaryen",
+    "name": "Game Of Thrones \"Daenerys Targaryen\"",
     "img": "images/pop3.jpg",
     "description": "Caractéristiques : Figurine en vinyle taille env. 9 cm, en emballage boîte-fenêtre.",
     "ref": "05670",
     "price": "14,90€",
     "category": "goodies"
 }, {
-    "name": "Game Of Thrones Jon Snow King In The North",
+    "name": "Game Of Thrones \"Jon Snow King In The North\"",
     "img": "images/pop4.jpg",
     "description": "Caractéristiques : Figurine en vinyle taille env. 9 cm, en emballage boîte-fenêtre.",
     "ref": "08399",
     "price": "14,90€",
     "category": "goodies"
 }, {
-    "name": "Game Of Thrones Viserion",
+    "name": "Game Of Thrones \"Viserion\"",
     "img": "images/pop5.jpg",
     "description": "Caractéristiques : Figurine en vinyle grande taille env. 15 cm, en emballage boîte-fenêtre.",
     "ref": "06673",
     "price": "25,90€",
     "category": "goodies"
 }, {
-    "name": "Game Of Thrones Cersei Lannister",
+    "name": "Game Of Thrones \"Cersei Lannister\"",
     "img": "images/pop6.jpg",
     "description": "Caractéristiques : Figurine en vinyle taille env. 9 cm, en emballage boîte-fenêtre.",
     "ref": "08397",
     "price": "14,90€",
     "category": "goodies"
 }, {
-    "name": "Game Of Thrones Rhaegal",
+    "name": "Game Of Thrones \"Rhaegal\"",
     "img": "images/pop7.jpg",
     "description": "Caractéristiques : Figurine en vinyle grande taille env. 15 cm, en emballage boîte-fenêtre.",
     "ref": "07148",
     "price": "25,90€",
     "category": "goodies"
 }, {
-    "name": "Game Of Thrones Drogon",
+    "name": "Game Of Thrones \"Drogon\"",
     "img": "images/pop8.jpg",
     "description": "Caractéristiques : Figurine en vinyle taille env. 9 cm, en emballage boîte-fenêtre.",
     "ref": "09094",

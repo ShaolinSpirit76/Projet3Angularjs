@@ -46,6 +46,16 @@ body {
 background-color: rgba(0, 0, 0, 0.85);
 }
 
+/*  */
+
+.rem {
+  height:1rem;
+}
+
+.card {
+    font-family: 'Merienda', cursive;
+}
+
 
 /* CSS du Footer */
 

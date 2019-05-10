@@ -5,9 +5,9 @@
       <div class="card-body">
         <h5 class="card-title">{{article.name}}</h5>
         <p class="card-text">{{article.description}}</p>
-        <p class="card-text">{{article.price}}</p>
+        <p class="card-text">{{article.price}}<span class="float-right">#{{article.ref}}</span></p>
         <div>
-          <button ng-click="addToCart()" class="btn btn-primary">Ajouter au panier</button>
+          <a ng-click="addToCart(article)" class="btn btn-primary" href="#!/boardGame">Ajouter au panier</a>
         </div>
       </div>
     </div>

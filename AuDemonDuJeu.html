@@ -65,7 +65,7 @@
           </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
-          <button class="btn btn-success my-2 my-sm-0 text-white mx-auto" type="submit"><i class="fas fa-shopping-cart"></i>
+          <button class="btn btn-success my-2 my-sm-0 text-white mx-auto" ng-click="totalAmount()" type="submit" data-toggle="modal" data-target="#exampleModalLong"><i class="fas fa-shopping-cart"></i>
             Panier</button>
         </form>
       </div>
@@ -88,8 +88,8 @@
           <div class="carousel-item active">
             <img src="images/caroussel1.jpg" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block rounded">
-              <h5>Imhotep - Les Bâtisseurs D' Egypte</h5>
-              <p>Saurez-vous être à la hauteur de son uvre en construisant des monuments pour la postérité ?</p>
+              <h5>Imhotep - Les Bâtisseurs D'Egypte</h5>
+              <p>Saurez-vous être à la hauteur de son oeuvre en construisant des monuments pour la postérité ?</p>
             </div>
           </div>
           <div class="carousel-item">
@@ -144,55 +144,70 @@
   <div ng-view>
   </div>
 
+  <!-- Modal -->
+  <div ng-controller="articlesCtrl" class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <ul>
+        <li class="modal-body" ng-repeat="product in cart"><img src={{product.img}} title={{product.name}} alt = {{product.name}} style = "width:50%;"/> <button ng-click="remove(product)" type="button" name="button"><i class="fas fa-times"></i></button> <h3>{{product.name}}</h3>{{product.ref}} {{product.quantity}} {{product.price}} {{product.totalPrice}}
+          <button ng-click="oneLess(product)" type="button" name="button">-</button>
+          <button ng-click="oneMore(product)" type="button" name="button">+</button>
+        </li>
+
+        </ul>
+
+
+        <div class="modal-footer">
+          <p>Total : {{totalAmount}}</p>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
 
 
   <!-- Footer -->
-
+<footer>
   <!--Footer Links-->
   <div class="container mt-5 mb-4 text-center text-md-left">
-    <div class="row mt-3">
+
+
+    <div class="row w-100 mt-3">
 
       <!--First column-->
-      <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-        <h6 class="footer-title">Le démon du jeu !</h6>
+      <div class="text-center col-12 col-md-3 col-lg-3 col-xl-3 mb-4">
+
+        <h6 class="footer-title">Le démon du jeu</h6>
+
         <hr class="mb-4 mt-0 d-inline-block mx-auto" />
 
-        <!--Google Map-->
-        <div class="map-responsive">
-          <iframe id="map" src="https://www.google.com/maps/place/140+Rue+Victor+Hugo,+76600+Le+Havre/@49.4915917,0.1060158,17z/data=!3m1!4b1!4m5!3m4!1s0x47e02f21edc39467:0x2488e4f62f905774!8m2!3d49.4915917!4d0.1082045?hl=fr" width="300" height="300"
-            frameborder="0" style="border:0" allowfullscreen></iframe>
-        </div>
-        <!--/.Google Map-->
+
 
       </div>
       <!--/.First column-->
 
       <!--Second column-->
-      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+      <div class="text-center col-12 col-md-3 col-lg-3 col-xl-3 mb-4">
         <h6 class="footer-title">Mentions Légales</h6>
         <hr class="mb-4 mt-0 d-inline-block mx-auto" />
-        <li class="footer-legis"><a href="#!">Conditions Générales de Vente</a></li>
+        <li class="footer-legis"><a href="#!/conditions">Conditions Générales de Vente</a></li>
         <li class="footer-legis"><a href="#!">Politique de Rétractation</a></li>
         <li class="footer-legis"><a href="#!">Politique de Livraison</a></li>
+        <li class="footer-legis"><a href="#!/legal">Mentions Légales</a></li>
       </div>
       <!--/.Second column-->
 
-      <!--Third column-->
-      <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-        <h6 class="footer-title">Législation</h6>
-        <hr class="mb-4 mt-0 d-inline-block mx-auto" />
-        <li class="footer-legis"><a href="#!">Mentions Légales</a></li>
-        <li class="footer-legis"><a href="#!">Politique de Confidentialité</a></li>
-        <li class="footer-legis"><a href="#!">Déclarer un effet indésirable</a></li>
-      </div>
-      <!--/.Third column-->
-
-
-
       <!--Fourth column-->
-      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-4">
+      <div class="text-center col-12 col-md-3 col-lg-3 col-xl-3 mb-4">
         <h6 class="footer-title">Autres Informations</h6>
         <hr class="mb-4 mt-0 d-inline-block mx-auto" />
         <p>
@@ -203,16 +218,14 @@
           <i class="fas fa-phone mr-3"></i> + 33 2 35 41 71 91</p>
       </div>
       <!--/.Fourth column-->
-    </div>
-  </div>
+
   <!--/.Footer Links-->
 
   <!--Paiement-->
-  <div class="container">
-    <div class="row">
-      <div class="col-4">
-      </div>
-      <div class="col-4">
+
+
+
+      <div class="col-12 text-center col-md-3 col-lg-3 col-xl-3">
         <h6 class="footer-title">Vos moyens de paiement :</h6>
         <hr class="mt-0 d-inline-block" />
         <p>
@@ -223,14 +236,13 @@
       </div>
 
 
-      <div class="col-4">
-
-      </div>
 
 
     </div>
 
-  </div>
+
+        </div>
+
 
   <!--/.Paiement-->
 
@@ -241,10 +253,6 @@
 
   </footer>
   <!--/.Footer-->
-
-
-
-
 
   <!-- CDN JavaScript toujours à la fin du body pour éviter les bug -->
   <!-- D'abord le CDN de JQuery -->

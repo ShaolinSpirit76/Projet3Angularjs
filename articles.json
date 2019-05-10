@@ -4,56 +4,72 @@
     "description": "ORBIS se range dans la famille des \"Gateway Games\" : des jeux simples à expliquer, rapides à jouer, mais difficiles à maîtriser.",
     "ref": "09258",
     "price": "29,90€",
-    "category": "boardgames"
+    "category": "boardgames",
+    "id":0,
+    "qty":0
 }, {
     "name": "7 Wonders Le Duel",
     "img": "images/duel1.jpg",
     "description": "Tout le plaisir de 7 Wonders dans une version spécialement conçue pour deux joueurs !",
     "ref": "06186",
     "price": "24,90€",
-    "category": "boardgames"
+    "category": "boardgames",
+    "id":1,
+    "qty":1
 }, {
     "name": "L'age De Pierre",
     "img": "images/pierre1.jpg",
     "description": "Il vous faudra vous dépasser et vous débrouiller, tout comme vos ancêtres, afin d'atteindre la victoire! ",
     "ref": "02907",
     "price": "45,00€",
-    "category": "boardgames"
+    "category": "boardgames",
+    "id":2,
+    "qty":2
 }, {
     "name": "Pillards De La Mer Du Nord",
     "img": "images/pillards1.jpg",
     "description": "Pillards de la Mer du Nord se déroule pendant l'âge d'or des Vikings. Les joueurs incarnent des guerriers vikings qui vont chercher à impressionner le Jarl (Chef de Clan).",
     "ref": "08260",
     "price": "45,00€",
-    "category": "boardgames"
+    "category": "boardgames",
+    "id":3,
+    "qty":3
 }, {
     "name": "Imaginarium",
     "img": "images/imaginarium1.jpg",
     "description": "Réparez, démontez, recrutez, échangez ! Soyez le plus brillant des bricoleurs fous d'un fantastique capharnaüm !",
     "ref": "08994",
     "price": "48,00€",
-    "category": "boardgames"
+    "category": "boardgames",
+    "id":4,
+    "qty":4
 }, {
     "name": "Nations",
     "img": "images/nations1.jpg",
     "description": "Chaque joueur va contrôler le destin d'une nation, depuis leur naissance préhistorique et jusqu'à la première guerre mondiale.",
     "ref": "05038",
     "price": "59,90€",
-    "category": "boardgames"
+    "category": "boardgames",
+    "id":5,
+    "qty":5
 }, {
     "name": "La Quête Des Terres Du Milieu",
     "img": "images/terresDuMilieu1.jpg",
     "description": "Voici l'un des grands jeux de cette fin d'année! Le destin des Terres du Milieu est entre vos mains !",
     "ref": "03473",
     "price": "64,90€",
-    "category": "boardgames"
+    "category": "boardgames",
+    "id":6,
+    "qty":6
 }, {
     "name": "Le Trône De Fer : Jeu De Plateau",
     "img": "images/troneDeFer1.jpg",
     "description": "Plongez dans un jeu de luttes d'influence, de conquêtes de territoires, et de diplomatie dans le monde du Trône de Fer.",
     "ref": "03708",
     "price": "59,90€",
-    "category": "boardgames"
+    "category": "boardgames",
+    "id":7,
+    "qty":7
 }, {
     "name": "Le Voleur De Carottes",
     "img": "images/carottes1.jpg",

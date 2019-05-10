@@ -65,7 +65,7 @@
           </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
-          <button class="btn btn-success my-2 my-sm-0 text-white mx-auto" type="submit"><i class="fas fa-shopping-cart"></i>
+          <button class="btn btn-success my-2 my-sm-0 text-white mx-auto" data-toggle="modal" data-target="#exampleModal" type="submit"><i class="fas fa-shopping-cart"></i>
             Panier</button>
         </form>
       </div>
@@ -86,35 +86,35 @@
         </ol>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="images/caroussel1.jpg" class="d-block w-100" alt="...">
+            <img src="images/caroussel1.jpg" class="d-block w-100 img-fluid" alt="...">
             <div class="carousel-caption d-none d-md-block rounded font-weight-bolder">
               <h5>Imhotep - Les Bâtisseurs D'Egypte</h5>
               <p>Saurez-vous être à la hauteur de son uvre en construisant des monuments pour la postérité ?</p>
             </div>
           </div>
           <div class="carousel-item">
-            <img src="images/caroussel2.jpg" class="d-block w-100" alt="...">
+            <img src="images/caroussel2.jpg" class="d-block w-100 img-fluid" alt="...">
             <div class="carousel-caption d-none d-md-block rounded font-weight-bolder">
               <h5>Chronicles Of Crime - Edition Classique</h5>
               <p>Chronicles of Crime est un jeu coopératif d'investigation criminelle pour 1 à 4 joueurs alliant Jeu de plateau, application numérique et réalité virtuelle.</p>
             </div>
           </div>
           <div class="carousel-item">
-            <img src="images/caroussel3.jpg" class="d-block w-100" alt="...">
+            <img src="images/caroussel3.jpg" class="d-block w-100 img-fluid" alt="...">
             <div class="carousel-caption d-none d-md-block rounded font-weight-bolder">
               <h5>Black Rose Wars Vf</h5>
               <p>Dans Black Rose Wars, chaque joueur incarne un des puissants Mages engagé dans la lutte décennale pour savoir qui sera le Nouveau Grand Maître de la Loge de la Rose Noire.</p>
             </div>
           </div>
           <div class="carousel-item">
-            <img src="images/caroussel4.jpg" class="d-block w-100" alt="...">
+            <img src="images/caroussel4.jpg" class="d-block w-100 img-fluid" alt="...">
             <div class="carousel-caption d-none d-md-block rounded font-weight-bolder">
               <h5>Space Explorers</h5>
               <p>Embarquez-vous dans la course spatiale où la concurrence est rude ! Une ode à la nostalgie dans un jeu de combinaisons dynamique et calculatoire ! </p>
             </div>
           </div>
           <div class="carousel-item">
-            <img src="images/caroussel5.jpg" class="d-block w-100" alt="...">
+            <img src="images/caroussel5.jpg" class="d-block w-100 img-fluid" alt="...">
             <div class="carousel-caption d-none d-md-block rounded font-weight-bolder">
               <h5>Voyages En Terre Du Milieu</h5>
               <p>Avec une campagne passionnante proposant de nombreux embranchements narratifs, des quêtes aux multiples facettes et un système de génération aléatoire du plateau de jeu...</p>
@@ -144,6 +144,29 @@
   <div ng-view>
   </div>
 
+
+<!-- Modal panier -->
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 

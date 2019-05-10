@@ -8,6 +8,7 @@ body {
   /* pour anciens Chrome et Safari */
   background-size: cover;
   /* version standardisée */
+  font-family: 'Merienda', cursive;
 }
 
 .img-fluid {

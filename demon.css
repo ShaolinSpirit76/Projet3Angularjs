@@ -95,6 +95,14 @@ h4 {
   color: #020B40;
   }
 
+#popArt {
+  font-size: 1.25rem;
+}
+
+.Quantity {
+  font-size: 1.25rem;
+}
+
 /* CSS du panier */
 #cartModal {
   margin: 0;

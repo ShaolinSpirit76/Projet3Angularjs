@@ -65,7 +65,7 @@
         </li>
       </ul>
       <form class="form-inline my-2 my-lg-0">
-        <button id="panier" class="btn my-2 my-sm-0 mx-auto" data-toggle="modal" data-target="#cartModal" type="submit" title="Voir votre panier"><i class="fas fa-shopping-cart"></i>
+        <button id="panier" ng-click="total(product)" class="btn my-2 my-sm-0 mx-auto" data-toggle="modal" data-target="#cartModal" type="submit" title="Voir votre panier"><i class="fas fa-shopping-cart"></i>
           Panier</button>
       </form>
     </div>
@@ -85,8 +85,8 @@
         <li data-target="#carouselExampleCaptions" data-slide-to="4"></li>
       </ol>
       <div class="carousel-inner">
-      <div class="carousel-item active">
-            <a href="https://www.youtube.com/watch?v=uKQAcu5a8Qk" title="Cliquez pour voir la démo en vidéo" target="_blank"><img src="images/caroussel1.jpg" class="d-block w-100 img-fluid" alt="..."></a>
+        <div class="carousel-item active">
+          <a href="https://www.youtube.com/watch?v=uKQAcu5a8Qk" title="Cliquez pour voir la démo en vidéo" target="_blank"><img src="images/caroussel1.jpg" class="d-block w-100 img-fluid" alt="..."></a>
           <div class="carousel-caption d-none d-md-block rounded font-weight-bolder">
             <h5>Imhotep - Les Bâtisseurs D'Egypte</h5>
             <p>Saurez-vous être à la hauteur de son uvre en construisant des monuments pour la postérité ?</p>
@@ -111,9 +111,9 @@
           <div class="carousel-caption d-none d-md-block rounded font-weight-bolder">
             <h5>Space Explorers</h5>
             <p>Embarquez-vous dans la course spatiale où la concurrence est rude ! Une ode à la nostalgie dans un jeu de combinaisons dynamique et calculatoire ! </p>
+          </div>
         </div>
-      </div>
-          <div class="carousel-item">
+        <div class="carousel-item">
           <a href="https://www.youtube.com/watch?v=ISBmaayR3oo" title="Cliquez pour voir la démo en vidéo" target="_blank"><img src="images/caroussel5.jpg" class="d-block w-100 img-fluid" alt="..."></a>
           <div class="carousel-caption d-none d-md-block rounded font-weight-bolder">
             <h5>Voyages En Terre Du Milieu</h5>
@@ -145,32 +145,32 @@
   </div>
 
 
-<!-- Modal avertissement ajout d'un article -->
+  <!-- Modal avertissement ajout d'un article -->
 
-<div id="infoModal" class="modal" tabindex="-1" role="dialog">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title text-center">Vous avez bien ajouté cet article au panier.</h4>
-        <p><br />
-          <i class="far fa-smile-wink fa-3x" title="Merci !"></i>
-        </p>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="keepShopping btn btn-secondary" data-dismiss="modal">Continuer mes achats</button>
-        <button type="button" data-toggle="modal" data-target="#cartModal" class="pay btn btn-primary">Voir mon panier</button>
+  <div id="infoModal" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title text-center">Vous avez bien ajouté cet article au panier.</h4>
+          <p><br />
+            <i class="far fa-smile-wink fa-3x" title="Merci !"></i>
+          </p>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="keepShopping btn btn-secondary" data-dismiss="modal">Continuer mes achats</button>
+          <button type="button" ng-click="total(product)" data-toggle="modal" data-target="#cartModal" class="pay btn btn-primary">Voir mon panier</button>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
   <!-- Modal panier -->
 
   <!-- Modal -->
-  <div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div ng-controller="articlesCtrl" class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div id="wallPaperModal" class="modal-content">
         <div class="modal-header">
@@ -179,23 +179,42 @@
             <hr class="mb-4 mt-0 d-inline-block text-center" />
             <div id="deliver" class="text-white text-center">Livraison gratuite en France métropolitaine
               à partir de 65€ d'achats. Profitez-en !</div>
-            <p><hr class="mb-4 mt-0 d-inline-block mx-auto" /></p>
+            <p>
+              <hr class="mb-4 mt-0 d-inline-block mx-auto" />
+            </p>
           </div>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-                <div class="modal-body">
-                  <ul>
-               <li class="modal-body" ng-repeat="product in cart"><img src={{product.img}} title={{product.name}} alt = {{product.name}} style = "width:50%;"/> <button ng-click="remove(product)" type="button" name="button"><i class="fas fa-times"></i></button> <h3>{{product.name}}</h3>{{product.ref}} {{product.quantity}} {{product.price}} {{product.totalPrice}}
-                 <button ng-click="oneLess(product)" type="button" name="button">-</button>
-                 <button ng-click="oneMore(product)" type="button" name="button">+</button>
-               </li>
+        <div class="modal-body">
+          <ul>
+            <li class="modal-body" ng-repeat="product in cart">
 
-       </ul>
+              <h4>{{product.name}}</h4>
+              <img src={{product.img}} title={{product.name}} alt={{product.name}} style="width:50%;" /> {{product.ref}} <a ng-click="remove(product)" name="button" title="Supprimer l'article"><i class="fas fa-trash-alt fa-2x"></i></a>
+              <div class="text-center">
+                <span class="float-left">
+                  {{product.price}}
+                </span>
+                <span class="text-center">
+                  <a ng-click="oneLess(product)" name="button" title="Enlever un article"><i class="fas fa-minus-circle fa-2x"></i></a>
+                  <span class="Quantity">
+                   {{product.quantity}}
+                 </span>
+                   <a ng-click="oneMore(product)" name="button" title="Ajouter un article"><i class="fas fa-plus-circle fa-2x"></i></a>
+                </span>
+                <span class="float-right">
+                  {{product.totalPrice}} €
+                </span>
+            </li>
+
+          </ul>
         </div>
         <div class="modal-body">
-<p><hr class="mb-4 mt-0 d-inline-block mx-auto" /></p>
+          <p>
+            <hr class="mb-4 mt-0 d-inline-block mx-auto" />
+          </p>
           <label for="country" class="ml-auto larger">Frais de port : </label>
 
 
@@ -227,12 +246,18 @@
               <option value="La Réunion">La Réunion</option>
               <option value="Mayotte">Mayotte</option>
           </select>
-
+          <p><br />
+            <hr class="mb-4 mt-0 d-inline-block mx-auto" />
+          </p>
+          <div class="text-right">
+            <p ng-repeat="product in cart">Total : {{totalAmount}} €</p>
+          </div>
         </div>
 
         <div class="modal-footer">
-          <button type="button" class="keepShopping btn btn-secondary" data-dismiss="modal">Continuer mes achats</button>
-          <button type="button" class="pay btn btn-primary">Valider ma commande</button>
+
+          <button type="button" ng-click="keepOn()" class="keepShopping btn btn-secondary" data-dismiss="modal">Continuer mes achats</button>
+          <button type="button" ng-click="stop()" class="pay btn btn-primary">Valider ma commande</button>
         </div>
       </div>
     </div>
@@ -242,90 +267,91 @@
 
 
   <!-- Footer -->
- <footer>
-   <!--Footer Monster-->
+  <footer>
+    <!--Footer Monster-->
 
-   <div class="row no-gutter">
+    <div class="row no-gutters">
 
-     <div class="col-12 mx auto text-center separatorDemon mt-4">
-       <p><i class="fab fa-optin-monster fa-3x color-red"></i></p>
-     </div>
-   </div>
-
-
-   <div class="container mt-5 mb-4 text-center text-md-left">
-     <div class="row mt-3">
-
-       <!--Boutique column-->
-       <div class="text-center col-12 col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
-         <h6 class="footer-title">Le démon du jeu</h6>
-         <hr class="mb-4 mt-0 d-inline-block mx-auto" />
-
-         <!--Google Map-->
-         <div class="map-responsive">
-           <iframe id="map"
-             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2591.624923988113!2d0.10635953213743149!3d49.491591685329794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e02f21edc39467%3A0x2488e4f62f905774!2s140+Rue+Victor+Hugo%2C+76600+Le+Havre!5e0!3m2!1sfr!2sfr!4v1557408396151!5m2!1sfr!2sfr"
-             width="300" height="275" frameborder="0" style="border:0" allowfullscreen></iframe>
-         </div>
-         <!--/.Google Map-->
-
-       </div>
-       <!--/.Boutique column-->
-
-       <!--Info column-->
-       <div class="col-md-4 col-lg-3 col-xl-3 mx-auto" id="infoColumn">
-         <h6 class="footer-title">Autres Informations</h6>
-         <hr class="mb-4 mt-0 d-inline-block mx-auto" />
-         <p>
-           <i class="fas fa-home fa-2x mr-2 footer-legis"></i> 140, rue Victor Hugo<br />
-          <i class="fas fa-home fa-2x mr-2 footer-legis text-white"></i> 76600, Le Havre</p>
-           <p>
-             <i class="fas fa-envelope fa-2x mr-2 footer-legis"></i><a href="https://m.me/LEDEMONDUJEU?fbclid=IwAR1SN_3Z134QRe23Fe6OEOWy72IOe_UF1JigW3Pti5rSS681qOuk_FZvXyA" target="_blank">Me contacter</a></p>
-           <p>
-             <i class="fas fa-phone fa-2x mr-2 footer-legis"></i>+33 2 35 41 71 91</p>
-           <p>
-             <a href="https://www.facebook.com/LEDEMONDUJEU?fref=ts" target="_blank"><i class="fab fa-facebook fa-2x mr-2 footer-legis"></i>Visitez ma page</a></p>
-       </div>
-       <!--/.Info column-->
-
-       <!--Mentions column-->
-       <div class="text-center col-12 col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
-         <h6 class="footer-title">Mentions Légales</h6>
-         <hr class="mb-4 mt-0 d-inline-block mx-auto" />
-         <li class="footer-legis mb-4 mt-0"><a href="#!/conditions">Conditions Générales de Vente</a></li>
-         <li class="footer-legis mb-4 mt-0"><a href="#!/delivery">Livraison et tarifs</a></li>
-         <li class="footer-legis mb-4 mt-0"><a href="#!/retract">Retour de produits</a></li>
-         <li class="footer-legis mb-4 mt-0"><a href="#!/legal">Mentions Légales</a></li>
-       </div>
-       <!--/.Mentions column-->
+      <div class="col-12 mx auto text-center separatorDemon mt-4">
+        <p><i class="fab fa-optin-monster fa-3x color-red"></i></p>
+      </div>
+    </div>
 
 
-       <!--Paiement-->
-       <div class="text-center col-12 col-md-3 col-lg-3 col-xl-3">
-         <h6 class="footer-title">Vos moyens de paiement :</h6>
-         <hr class="mt-0 d-inline-block" />
-         <p>
-           <i class="fab fa-cc-mastercard fa-3x" title="Master Card" aria-hidden="true"></i>
-           <i class="fab fa-cc-visa fa-3x" title="Visa"></i>
-           <a href="https://www.paypal.com/fr/signin" target="_blank"><i class="fab fa-cc-paypal fa-3x" title="Paypal"></i></a></p>
-         <div class="rem"></div>
-       </div>
+    <div class="container mt-5 mb-4 text-center text-md-left">
+      <div class="row mt-3">
 
-     </div>
-   </div>
-   <!--/.Paiement-->
+        <!--Boutique column-->
+        <div class="text-center col-12 col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
+          <h6 class="footer-title">Le démon du jeu</h6>
+          <hr class="mb-4 mt-0 d-inline-block mx-auto" />
 
-   <!--/.Fourth column-->
+          <!--Google Map-->
+          <div class="map-responsive">
+            <iframe id="map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2591.624923988113!2d0.10635953213743149!3d49.491591685329794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e02f21edc39467%3A0x2488e4f62f905774!2s140+Rue+Victor+Hugo%2C+76600+Le+Havre!5e0!3m2!1sfr!2sfr!4v1557408396151!5m2!1sfr!2sfr"
+              width="300" height="275" frameborder="0" style="border:0" allowfullscreen></iframe>
+          </div>
+          <!--/.Google Map-->
+
+        </div>
+        <!--/.Boutique column-->
+
+        <!--Info column-->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto" id="infoColumn">
+          <h6 class="footer-title">Autres Informations</h6>
+          <hr class="mb-4 mt-0 d-inline-block mx-auto" />
+          <p>
+            <i class="fas fa-home fa-2x mr-2 footer-legis"></i> 140, rue Victor Hugo<br />
+            <i class="fas fa-home fa-2x mr-2 footer-legis text-white"></i> 76600, Le Havre</p>
+          <p>
+            <i class="fas fa-envelope fa-2x mr-2 footer-legis"></i><a href="https://m.me/LEDEMONDUJEU?fbclid=IwAR1SN_3Z134QRe23Fe6OEOWy72IOe_UF1JigW3Pti5rSS681qOuk_FZvXyA" target="_blank">Me contacter</a></p>
+          <p>
+            <i class="fas fa-phone fa-2x mr-2 footer-legis"></i>+33 2 35 41 71 91</p>
+          <p>
+            <a href="https://www.facebook.com/LEDEMONDUJEU?fref=ts" target="_blank"><i class="fab fa-facebook fa-2x mr-2 footer-legis"></i>Visitez ma page</a></p>
+        </div>
+        <!--/.Info column-->
+
+        <!--Mentions column-->
+        <div class="text-center col-12 col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
+          <h6 class="footer-title">Mentions Légales</h6>
+          <hr class="mb-4 mt-0 d-inline-block mx-auto" />
+          <li class="footer-legis mb-4 mt-0"><a href="#!/conditions">Conditions Générales de Vente</a></li>
+          <li class="footer-legis mb-4 mt-0"><a href="#!/delivery">Livraison et tarifs</a></li>
+          <li class="footer-legis mb-4 mt-0"><a href="#!/retract">Retour de produits</a></li>
+          <li class="footer-legis mb-4 mt-0"><a href="#!/legal">Mentions Légales</a></li>
+        </div>
+        <!--/.Mentions column-->
 
 
-   <!--/.Footer Links-->
+        <!--Paiement-->
+        <div class="text-center col-12 col-md-3 col-lg-3 col-xl-3">
+          <h6 class="footer-title">Vos moyens de paiement :</h6>
+          <hr class="mt-0 d-inline-block" />
+          <p>
+            <i class="fab fa-cc-mastercard fa-3x" title="Master Card" aria-hidden="true"></i>
+            <i class="fab fa-cc-visa fa-3x" title="Visa"></i>
+            <a href="https://www.paypal.com/fr/signin" target="_blank"><i class="fab fa-cc-paypal fa-3x" title="Paypal"></i></a></p>
+          <div class="rem"></div>
+        </div>
 
-   <!-- Copyright -->
-   <div class="footer-copyright text-center py-3 w-100 text-white font-weight-bolder">© Mai 2019 Copyright | Paul, Damien, Dorian et Martin, Promo 2 de <a href="https://lamanu.fr/le-havre" class="text-white" target="_blank" title="Cliquez pour voir">La Manu du Havre.</a></div>
-   <!-- Copyright -->
+      </div>
+    </div>
+    <!--/.Paiement-->
 
- </footer>
-<!--/.Footer-->
+    <!--/.Fourth column-->
+
+
+    <!--/.Footer Links-->
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3 w-100 text-white font-weight-bolder">© Mai 2019 Copyright | Paul, Damien, Dorian et Martin, Promo 2 de <a href="https://lamanu.fr/le-havre" class="text-white" target="_blank"
+        title="Cliquez pour voir">La Manu du Havre.</a></div>
+    <!-- Copyright -->
+
+  </footer>
+  <!--/.Footer-->
 
 
 

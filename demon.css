@@ -16,8 +16,7 @@ body {
   background-color: #020B40;
 }
 
-.img-fluid {
-  /* A utiliser avec class="img-fluid" à appliquer à chaque image déclarée dans le html, pour que toutes les images soient responsives */
+.img-fluid {       /* A utiliser avec class="img-fluid" à appliquer à chaque image déclarée dans le html, pour que toutes les images soient responsives */
   max-width: 100%;
   height: auto;
 }
@@ -102,6 +101,40 @@ h4 {
 .Quantity {
   font-size: 1.25rem;
 }
+
+/* CSS des catégories */
+
+#divBG {
+  margin-top : 2rem;
+}
+
+#boardGame {
+  margin-top: 4rem;
+  margin-bottom: 6rem;
+}
+
+#divKD {
+  margin-top : 2rem;
+}
+
+#Kids {
+  margin-top: 4rem;
+  margin-bottom: 6rem;
+}
+
+#divGD {
+margin-top : 2rem;
+}
+
+#Goodies {
+  margin-top: 4rem;
+  margin-bottom: 6rem;
+}
+
+.space {
+  margin-bottom: 1rem;
+}
+
 
 /* CSS du panier */
 #cartModal {

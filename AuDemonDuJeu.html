@@ -43,7 +43,7 @@
       <span id="textNavButton" class="border border-danger rounded">Cliquez pour voir le menu</span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div ng-controller="articlesCtrl" class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
           <div class="cpt">
@@ -66,7 +66,7 @@
       </ul>
       <form class="form-inline my-2 my-lg-0">
         <button id="panier" ng-click="total(product)" class="btn my-2 my-sm-0 mx-auto" data-toggle="modal" data-target="#cartModal" type="submit" title="Voir votre panier"><i class="fas fa-shopping-cart"></i>
-          Panier</button>
+          Panier {{productTotalQuantity()}}</button>
       </form>
     </div>
   </nav>
@@ -145,27 +145,6 @@
   </div>
 
 
-  <!-- Modal avertissement ajout d'un article -->
-
-  <div id="infoModal" class="modal" tabindex="-1" role="dialog">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h4 class="modal-title text-center">Vous avez bien ajouté cet article au panier.</h4>
-          <p><br />
-            <i class="far fa-smile-wink fa-3x" title="Merci !"></i>
-          </p>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="keepShopping btn btn-secondary" data-dismiss="modal">Continuer mes achats</button>
-          <button type="button" ng-click="total(product)" data-toggle="modal" data-target="#cartModal" class="pay btn btn-primary">Voir mon panier</button>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <!-- Modal panier -->
 
@@ -192,17 +171,17 @@
             <li class="modal-body" ng-repeat="product in cart">
 
               <h4>{{product.name}}</h4>
-              <img src={{product.img}} title={{product.name}} alt={{product.name}} style="width:50%;" /> {{product.ref}} <a ng-click="remove(product)" name="button" title="Supprimer l'article"><i class="fas fa-trash-alt fa-2x"></i></a>
+              <img src={{product.img}} title={{product.name}} alt={{product.name}} style="width:50%;" /> {{product.ref}} <a ng-click="removeArticle(product)" name="button" title="Supprimer l'article"><i class="fas fa-trash-alt fa-2x"></i></a>
               <div class="text-center">
                 <span class="float-left">
-                  {{product.price}}
+                  {{product.price}} €
                 </span>
                 <span class="text-center">
-                  <a ng-click="oneLess(product)" name="button" title="Enlever un article"><i class="fas fa-minus-circle fa-2x"></i></a>
+                  <a ng-click="product.quantity = product.quantity - 1; oneLess(product); product.quantity ? '0' : removeArticle(product)" name="button" title="Enlever un article"><i class="fas fa-minus-circle fa-2x"></i></a>
                   <span class="Quantity">
                    {{product.quantity}}
                  </span>
-                   <a ng-click="oneMore(product)" name="button" title="Ajouter un article"><i class="fas fa-plus-circle fa-2x"></i></a>
+                   <a ng-click="product.quantity = product.quantity + 1; oneMore(product)" name="button" title="Ajouter un article"><i class="fas fa-plus-circle fa-2x"></i></a>
                 </span>
                 <span class="float-right">
                   {{product.totalPrice}} €
@@ -250,7 +229,7 @@
             <hr class="mb-4 mt-0 d-inline-block mx-auto" />
           </p>
           <div class="text-right">
-            <p ng-repeat="product in cart">Total : {{totalAmount}} €</p>
+            <p>Total : {{totalAmount()}} €</p>
           </div>
         </div>
 

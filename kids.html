@@ -1,6 +1,7 @@
-<div>
-  <div class="row no-gutters">
-    <div class="col-12 col-md-6 col-lg-3 card" ng-repeat="article in articles|filter:{category:'kids'}">
+<div id="divKD">
+  <h3 class="text-center">Nos jeux pour enfant</h3>
+  <div id="Kids" class="row no-gutters">
+    <div class="space col-12 col-md-6 col-lg-3 card" ng-repeat="article in articles|filter:{category:'kids'}">
       <img class="card-img-top" src={{article.img}} alt={{article.name}}>
       <div class="card-body">
         <div class="text-center">
@@ -25,7 +26,7 @@
           </div>
         </div>
 
-        <p class="card-text">{{article.price}}<span class="float-right">{{article.ref}}</span></p>
+        <p class="card-text">{{article.price}} €<span class="float-right">{{article.ref}}</span></p>
         <div class="text-center">
           <a ng-click="addToCart(article)" href="#!/kids" data-toggle="modal" data-target="#infoModal" type="button" class="btn btn-primary text-white">Ajouter au panier</a>
         </div>

@@ -8,6 +8,12 @@ body {
   /* pour anciens Chrome et Safari */
   background-size: cover;
   /* version standardisée */
+  font-family: 'Merienda', cursive;
+}
+
+#panier {
+  color: #F27405;
+  background-color: #020B40;
 }
 
 .img-fluid {
@@ -34,7 +40,7 @@ body {
   -webkit-box-shadow: 0px 12px 15px 0px #000000;
   -o-box-shadow: 0px 12px 15px 0px #000000;
   box-shadow: 0px 12px 15px 0px #000000;
-  filter:progid:DXImageTransform.Microsoft.Shadow(color=#000000, Direction=180, Strength=15);
+  filter: progid:DXImageTransform.Microsoft.Shadow(color=#000000, Direction=180, Strength=15);
 }
 
 .nav-link {
@@ -85,6 +91,47 @@ h3 {
   color: red;
 }
 
+h4 {
+  color: #020B40;
+  background-color: #F27405;
+}
+
+/* CSS du panier */
+#cartModal {
+  margin: 0;
+  padding: 0;
+  background: url(images/fondCart3.jpg) no-repeat center fixed;
+  -webkit-background-size: cover;
+  /* pour anciens Chrome et Safari */
+  background-size: cover;
+  /* version standardisée */
+}
+
+#wallPaperModal {
+  margin: 0;
+  padding: 0;
+  /* background: url(images/backCart2.jpg) no-repeat center fixed; */
+  background-color: rgba(255, 255, 255, 0.85);
+  -webkit-background-size: cover;
+  /* pour anciens Chrome et Safari */
+  background-size: cover;
+  /* version standardisée */
+}
+
+#keepShopping {
+  background-color: #F27405;
+  color: #020B40;
+}
+
+#pay {
+  background-color: #020B40;
+  color: #F27405;
+}
+
+#deliver {
+  background-color: rgba(2, 11, 64, 0.75);
+}
+
 /* CSS du Footer */
 footer {
   width: 100%;
@@ -103,13 +150,16 @@ footer {
   margin-bottom: 0.1rem;
   margin-top: 0;
 }
+
 #infoColumn {
-    font-size: 0.8rem;
-    color: #020B40;
+  font-size: 0.8rem;
+  color: #020B40;
 }
+
 #map {
   border-radius: 8%;
 }
+
 .fa-transparent {
   color: transparent;
 }
@@ -126,19 +176,19 @@ li {
 }
 
 /* ***** Links ******/
-
 a {
   text-decoration: none;
   color: #020B40;
 }
+
 a:visited {
   color: #020B40;
 }
+
 a:hover, a:focus, a:active {
   text-decoration: none;
   color: #F27405;
 }
-
 
 /* Google Map Responsive */
 .map-responsive {
@@ -157,6 +207,18 @@ a:hover, a:focus, a:active {
   position: absolute;
 }
 
+/* Les Conditions de Vente*/
+.conditions {
+  font-size: 0.8rem;
+  padding: 5% 10% 5% 10%;
+}
+
+.titreConditions {
+  font-size: 0.9rem;
+  color: #020B40;
+  font-weight: 700;
+}
+
 /*Separator Demon Footer*/
 .separatorDemon {
   background: linear-gradient(to right, #F27405, transparent, #F27405);
@@ -171,17 +233,21 @@ a:hover, a:focus, a:active {
 }
 
 .separationMenu {
-	clear: both;
-	position: absolute;
-	margin-top :10px;
-	margin-left: 250px;
-	height: 200px;
-	width : 5px;
-	background: black;
-	}
+  clear: both;
+  position: absolute;
+  margin-top: 10px;
+  margin-left: 250px;
+  height: 200px;
+  width: 5px;
+  background: black;
+}
 
 hr {
   background-color: #F27405;
   width: 10em;
   height: 1px;
+}
+
+#fafa {
+  color: white;
 }

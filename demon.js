@@ -4,7 +4,8 @@ app.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider
       .when('/',{
-        templateUrl:'home.html'
+        templateUrl:'home.html',
+        controller: 'articlesCtrl'
       })
       .when('/boardGame',{
         templateUrl:'boardGame.html',
@@ -37,5 +38,17 @@ app.controller('articlesCtrl',['$scope','$http', function($scope, $http){
       }, function errorCallback(response){
     alert('error');
   });
+  $scope.cart = [];
+
+  var findItemById = function(items, id) {
+    return _.find(items, function(article) {
+      return articles.id === id;
+    });
+  };
+
+  $scope.addToCart = function(cartToAdd) {
+      var found = findItemById($scope.cart, cartToAdd.id);
+      console.log(found);
+  };
 
 }]);

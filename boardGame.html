@@ -5,7 +5,7 @@
       <img class="card-img-top" src={{article.img}} alt={{article.name}}>
       <div class="card-body">
         <div class="text-center">
-        <h5 class="card-title">{{article.name}}</h5>
+          <p class="articleName card-title font-weight-bolder">{{article.name}}</p>
         </div>
 
         <div class="accordion" id="accordionExample">
@@ -13,9 +13,9 @@
             <div class="card-header" id="headingOne">
               <h2 class="mb-0">
                 <div class="text-center">
-                <button class="btn btn-link" type="button" data-toggle="collapse" data-target=#drop{{$index}} aria-expanded="true" aria-controls="collapseOne">
-                  Description
-                </button>
+                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target=#drop{{$index}} aria-expanded="true" aria-controls="collapseOne">
+                    Description
+                  </button>
                 </div>
               </h2>
             </div>
@@ -27,11 +27,11 @@
           </div>
         </div>
 
-        <p class="card-text">{{article.price}} €<span class="float-right">{{article.ref}}</span></p>
+        <p class="card-text font-weight-bolder">{{article.price}} €<span class="float-right font-weight-bolder">{{article.ref}}</span></p>
         <div>
           <div class="text-center">
-          <a ng-click="addToCart(article)" href="#!/boardGame" data-toggle="modal" data-target="#infoModal" type="button" class="btn btn-primary text-white">Ajouter au panier</a>
-</div>
+            <a ng-click="addToCart(article)" href="#!/boardGame" data-toggle="modal" data-target="#infoModal" type="button" class="btn btn-primary text-white">Ajouter au panier</a>
+          </div>
         </div>
       </div>
     </div>

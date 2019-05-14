@@ -11,12 +11,43 @@ body {
   font-family: 'Merienda', cursive;
 }
 
-#panier {
+/* #panier {
   color: #F27405;
   background-color: #020B40;
+  height: 3em;
+}
+#panier:hover{
+  color: white;
+  background-color: #9c27b0;
+} */
+/* panier */
+.btn-panier {
+  -webkit-transition: 0.5s ease;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
 }
 
-.img-fluid {       /* A utiliser avec class="img-fluid" à appliquer à chaque image déclarée dans le html, pour que toutes les images soient responsives */
+.btn-panier.btn-primary {
+  font-size: 16px;
+  border: 2px solid #F27405;
+  background: transparent;
+  padding: 10px;
+  text-transform: uppercase;
+  border-radius: 30px;
+  color: #020B40;
+}
+
+.btn-panier.btn-primary:hover {
+  background: transparent;
+  color: #020B40;
+  border-radius: 0;
+  border: 2px solid #F27405;
+}
+
+.img-fluid {
+  /* A utiliser avec class="img-fluid" à appliquer à chaque image déclarée dans le html, pour que toutes les images soient responsives */
   max-width: 100%;
   height: auto;
 }
@@ -27,6 +58,15 @@ body {
 
 .container {
   font-family: 'Merienda', cursive;
+}
+
+.bd-example {
+  margin-top: 1.5rem;
+  -moz-box-shadow: 0px 12px 15px 0px #000000;
+  -webkit-box-shadow: 0px 12px 15px 0px #000000;
+  -o-box-shadow: 0px 12px 15px 0px #000000;
+  box-shadow: 0px 12px 15px 0px #000000;
+  filter: progid:DXImageTransform.Microsoft.Shadow(color=#000000, Direction=180, Strength=15);
 }
 
 /* Barre Menu */
@@ -81,18 +121,19 @@ body {
   font-family: 'Merienda', cursive;
 }
 
-#more {
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-}
-
 h3 {
-  color: red;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  color: #020B40;
+  background-color: #F27405;
 }
 
 h4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   color: #020B40;
-  }
+  background-color: #F27405;
+}
 
 #popArt {
   font-size: 1.25rem;
@@ -103,38 +144,30 @@ h4 {
 }
 
 /* CSS des catégories */
-
-#divBG {
-  margin-top : 2rem;
+.btn-primary {
+  color: #fff;
+  background-color: #F27405;
+  border-color: #007bff
 }
 
-#boardGame {
-  margin-top: 4rem;
-  margin-bottom: 6rem;
+.btn-primary:hover {
+  color: #fff;
+  background-color: #9c27b0;
+  border-color: #0062cc
 }
 
-#divKD {
-  margin-top : 2rem;
-}
-
-#Kids {
-  margin-top: 4rem;
-  margin-bottom: 6rem;
-}
-
-#divGD {
-margin-top : 2rem;
-}
-
-#Goodies {
-  margin-top: 4rem;
-  margin-bottom: 6rem;
+#divKD, #divBG, #divGD, #more {
+  font-size: 0.8rem;
+  padding: 5% 10% 5% 10%;
 }
 
 .space {
   margin-bottom: 1rem;
 }
 
+.articleName {
+  font-size: 1rem;
+}
 
 /* CSS du panier */
 #cartModal {
@@ -168,14 +201,30 @@ margin-top : 2rem;
   color: #F27405;
 }
 
+.pay:hover {
+  background-color: #9c27b0;
+}
+
 #deliver {
   background-color: rgba(2, 11, 64, 0.75);
+}
+
+#item {
+  margin-bottom: 1rem;
+}
+
+#formInfo {
+  font-size: 0.75rem;
 }
 
 /* CSS du Footer */
 footer {
   width: 100%;
   height: auto;
+}
+
+#monster {
+  margin-top: 0.2em;
 }
 
 .footer-title {
@@ -219,6 +268,7 @@ li {
 a {
   text-decoration: none;
   color: #020B40;
+  outline-style: none;
 }
 
 a:visited {
@@ -268,6 +318,18 @@ a:hover, a:focus, a:active {
   height: 200px;
   width: 5px;
   background: black;
+}
+
+/* Les Conditions de Vente*/
+.conditions {
+  font-size: 0.8rem;
+  padding: 5% 10% 5% 10%;
+}
+
+.titreConditions {
+  font-size: 0.9rem;
+  color: #020B40;
+  font-weight: 700;
 }
 
 hr {

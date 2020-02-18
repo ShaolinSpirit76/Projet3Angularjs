@@ -1,0 +1,241 @@
+[{
+  "name": "Orbis",
+  "img": "images/orbis1.jpg",
+  "description": "ORBIS se range dans la famille des \"Gateway Games\" : des jeux simples à expliquer, rapides à jouer, mais difficiles à maîtriser.",
+  "ref": "#09258",
+  "price": 29.90,
+  "category": "boardgames",
+  "quantity": 1,
+  "totalPrice": 0,
+  "id": 0
+}, {
+  "name": "7 Wonders Le Duel",
+  "img": "images/duel1.jpg",
+  "description": "Tout le plaisir de 7 Wonders dans une version spécialement conçue pour deux joueurs !",
+  "ref": "#06186",
+  "price": 24.90,
+  "category": "boardgames",
+  "quantity": 1,
+  "totalPrice": 0,
+  "id": 1
+}, {
+  "name": "L'âge De Pierre",
+  "img": "images/pierre1.jpg",
+  "description": "Il vous faudra vous dépasser et vous débrouiller, tout comme vos ancêtres, afin d'atteindre la victoire! ",
+  "ref": "#02907",
+  "price": 45.00,
+  "category": "boardgames",
+  "quantity": 1,
+  "totalPrice": 0,
+  "id": 2
+}, {
+  "name": "Pillards Mer Du Nord",
+  "img": "images/pillards1.jpg",
+  "description": "Pillards de la Mer du Nord se déroule pendant l'âge d'or des Vikings. Les joueurs incarnent des guerriers vikings qui vont chercher à impressionner le Jarl (Chef de Clan).",
+  "ref": "#08260",
+  "price": 45.00,
+  "category": "boardgames",
+  "quantity": 1,
+  "totalPrice": 0,
+  "id": 3
+}, {
+  "name": "Imaginarium",
+  "img": "images/imaginarium1.jpg",
+  "description": "Réparez, démontez, recrutez, échangez ! Soyez le plus brillant des bricoleurs fous d'un fantastique capharnaüm !",
+  "ref": "#08994",
+  "price": 48.00,
+  "category": "boardgames",
+  "quantity": 1,
+  "totalPrice": 0,
+  "id": 4
+}, {
+  "name": "Nations",
+  "img": "images/nations1.jpg",
+  "description": "Chaque joueur va contrôler le destin d'une nation, depuis leur naissance préhistorique et jusqu'à la première guerre mondiale.",
+  "ref": "#05038",
+  "price": 59.90,
+  "category": "boardgames",
+  "quantity": 1,
+  "totalPrice": 0,
+  "id": 5
+}, {
+  "name": "Quête Terres Du Milieu",
+  "img": "images/terresDuMilieu1.jpg",
+  "description": "Voici l'un des grands jeux de cette fin d'année! Le destin des Terres du Milieu est entre vos mains !",
+  "ref": "#03473",
+  "price": 64.90,
+  "category": "boardgames",
+  "quantity": 1,
+  "totalPrice": 0,
+  "id": 6
+}, {
+  "name": "Le Trône De Fer",
+  "img": "images/troneDeFer1.jpg",
+  "description": "Plongez dans un jeu de luttes d'influence, de conquêtes de territoires, et de diplomatie dans le monde du Trône de Fer.",
+  "ref": "#03708",
+  "price": 59.90,
+  "category": "boardgames",
+  "quantity": 1,
+  "totalPrice": 0,
+  "id": 7
+}, {
+  "name": "Le Voleur De Carottes",
+  "img": "images/carottes1.jpg",
+  "description": "Si les joueurs réussissent à récolter quatre carottes avant que le lapin ne les ait mangées, ils gagnent la partie tous ensemble.",
+  "ref": "#05431",
+  "price": 12.00,
+  "category": "kids",
+  "quantity": 1,
+  "totalPrice": 0,
+  "id": 8
+}, {
+  "name": "Cartes : Piratak",
+  "img": "images/piratak1.jpg",
+  "description": "Le but du jeu est d'être le premier à collecter 6 cartes qui vont permettre de reconstituer un bateau complet.",
+  "ref": "#05008",
+  "price": 8.00,
+  "category": "kids",
+  "quantity": 1,
+  "totalPrice": 0,
+  "id": 9
+}, {
+  "name": "Bugs ( Marbushka )",
+  "img": "images/bugs1.jpg",
+  "description": "Le Professeur Bugsy adore les bestioles. Pour les étudier il essaye d'en attraper le plus possible. Mais quelle bestiole voudrait rentrer dans sa boîte d'allumettes? ",
+  "ref": "#07182",
+  "price": 35.00,
+  "category": "kids",
+  "quantity": 1,
+  "totalPrice": 0,
+  "id": 10
+}, {
+  "name": "Cap'taine Carcasse",
+  "img": "images/carcasse1.jpg",
+  "description": "Tous les scaphandriers à l'eau ! », tonne le Cap'taine Carcasse. Vous voilà jeté à 20 000 lieues sous les mers à la recherche de butins merveilleux !",
+  "ref": "#07552",
+  "price": 14.90,
+  "category": "kids",
+  "quantity": 1,
+  "totalPrice": 0,
+  "id": 11
+}, {
+  "name": "Camel Up",
+  "img": "images/camel1.jpg",
+  "description": "Dans cette course effrénée, tout est sens dessus dessous quand les chameaux s'empilent et que les pyramides se retournent.",
+  "ref": "#05200",
+  "price": 35.00,
+  "category": "kids",
+  "quantity": 1,
+  "totalPrice": 0,
+  "id": 12
+}, {
+  "name": "La Forêt Mystérieuse",
+  "img": "images/foret1.jpg",
+  "description": "Accompagne Jonas dans un voyage aussi merveilleux que périlleux !",
+  "ref": "#07758",
+  "price": 25.00,
+  "category": "kids",
+  "quantity": 1,
+  "totalPrice": 0,
+  "id": 13
+}, {
+  "name": "Bazar Bizarre",
+  "img": "images/bazarBizarre1.jpg",
+  "description": "Au milieu de ce grand bazar, une erreur est vite arrivée... Ne passez pas à côté de ce grand opus de la série !",
+  "ref": "#06886",
+  "price": 19.90,
+  "category": "kids",
+  "quantity": 1,
+  "totalPrice": 0,
+  "id": 14
+}, {
+  "name": "Maître Renard",
+  "img": "images/maitreRenard1.jpg",
+  "description": "Prouvez votre valeur en accomplissant les missions que vous confiera l'illustre roublard et en ramenant le plus gros butin possible de la ferme voisine !",
+  "ref": "#05515",
+  "price": 25.90,
+  "category": "kids",
+  "quantity": 1,
+  "totalPrice": 0,
+  "id": 15
+}, {
+  "name": "GoT : \"Night's King On Viserion\"",
+  "img": "images/pop1.jpg",
+  "description": "Caractéristiques : Figurine en vinyle grande taille env. 15 cm, en emballage boîte-fenêtre.",
+  "ref": "#08465",
+  "price": 45.00,
+  "category": "goodies",
+  "quantity": 1,
+  "totalPrice": 0,
+  "id": 16
+}, {
+  "name": "Game Of Thrones : \"Jon Snow\"",
+  "img": "images/pop2.jpg",
+  "description": "Caractéristiques : Figurine en vinyle taille env. 9 cm, en emballage boîte-fenêtre.",
+  "ref": "#05669",
+  "price": 14.90,
+  "category": "goodies",
+  "quantity": 1,
+  "totalPrice": 0,
+  "id": 17
+}, {
+  "name": "Game Of Thrones : \"Daenerys Targaryen\"",
+  "img": "images/pop3.jpg",
+  "description": "Caractéristiques : Figurine en vinyle taille env. 9 cm, en emballage boîte-fenêtre.",
+  "ref": "#05670",
+  "price": 14.90,
+  "category": "goodies",
+  "quantity": 1,
+  "totalPrice": 0,
+  "id": 18
+}, {
+  "name": "GoT : \"Jon Snow King In The North\"",
+  "img": "images/pop4.jpg",
+  "description": "Caractéristiques : Figurine en vinyle taille env. 9 cm, en emballage boîte-fenêtre.",
+  "ref": "#08399",
+  "price": 14.90,
+  "category": "goodies",
+  "quantity": 1,
+  "totalPrice": 0,
+  "id": 19
+}, {
+  "name": "Game Of Thrones : \"Viserion\"",
+  "img": "images/pop5.jpg",
+  "description": "Caractéristiques : Figurine en vinyle grande taille env. 15 cm, en emballage boîte-fenêtre.",
+  "ref": "#06673",
+  "price": 25.90,
+  "category": "goodies",
+  "quantity": 1,
+  "totalPrice": 0,
+  "id": 20
+}, {
+  "name": "Game Of Thrones : \"Cersei Lannister\"",
+  "img": "images/pop6.jpg",
+  "description": "Caractéristiques : Figurine en vinyle taille env. 9 cm, en emballage boîte-fenêtre.",
+  "ref": "#08397",
+  "price": 14.90,
+  "category": "goodies",
+  "quantity": 1,
+  "totalPrice": 0,
+  "id": 21
+}, {
+  "name": "Game Of Thrones : \"Rhaegal\"",
+  "img": "images/pop7.jpg",
+  "description": "Caractéristiques : Figurine en vinyle grande taille env. 15 cm, en emballage boîte-fenêtre.",
+  "ref": "#07148",
+  "price": 25.90,
+  "category": "goodies",
+  "quantity": 1,
+  "totalPrice": 0,
+  "id": 22
+}, {
+  "name": "Game Of Thrones : \"Drogon\"",
+  "img": "images/pop8.jpg",
+  "description": "Caractéristiques : Figurine en vinyle taille env. 9 cm, en emballage boîte-fenêtre.",
+  "ref": "#09094",
+  "price": 14.90,
+  "category": "goodies",
+  "quantity": 1,
+  "totalPrice": 0,
+  "id": 23
+}]

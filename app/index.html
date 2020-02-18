@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<!-- Spécification du langage de la page et du sens de lecture -->
+<html lang="fr" dir="ltr" ng-app="demonApp">
+
+<head>
+
+  <!-- Prise en charge des accents et autres caractères spéciaux -->
+  <meta charset="utf-8" />
+  <!-- Pour être responsive -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- CDN de font awesome pour l'utilisation des fa-fa et des icones -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <!-- CDN de Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- Lien éventuel pour l'utilisation d'une police -->
+  <link href="https://fonts.googleapis.com/css?family=Merienda" rel="stylesheet">
+  <!-- Lien pour placer une icone dans l'onglet, avant le titre de la page -->
+  <link rel="icon" href="images/iconeDemon.png">
+  <!-- CDN de AngularJs -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+  <!-- Pour utiliser la fonction ng-message d'AngularJs -->
+  <script src="https://code.angularjs.org/1.7.8/angular-messages.min.js"></script>
+  <!-- Script permettant d'afficher automatiquement tous les formats en français (au lieu du US) -->
+  <script src="https://code.angularjs.org/1.7.8/i18n/angular-locale_fr-fr.js"></script>
+  <!-- Ng Route -->
+  <script src="https://code.angularjs.org/1.7.8/angular-route.min.js"></script>
+  <!-- Lien avec la page CSS (toujours après Bootstrap pour éviter les bug) -->
+  <link rel="stylesheet" href="demon.css" />
+  <!-- Titre de la page affiché dans l'onglet -->
+  <title>Au démon du jeu</title>
+
+</head>
+
+<body ng-controller="articlesCtrl">
+
+  <!-- Début du header -->
+
+
+  <!-- Début de la navbar -->
+  <nav id="menu" class="navbar navbar-expand-lg sticky-top">
+    <a class="navbar-brand" href="#/" title="Revenir à l'accueil"><img src="images/logo.png" class="img-fluid" alt="logo du démon du jeu" width="70%" height="70%" /></a>
+    <button id="navButton" class="navbar-toggler mx-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span id="textNavButton" class="border border-danger rounded">Cliquez pour voir le menu</span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <div class="cpt">
+            <a ng-click="scrollToTop()" class="nav-link" href="#!/boardGame"><img src="images/games.png" class="imgNavBar img-fluid rounded-circle" alt="logo du démon du jeu" width="75%" height="75%" /></a>
+            <a ng-click="scrollToTop()" class="nav-link" href="#!/boardGame">Jeux de société</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <div class="cpt">
+            <a ng-click="scrollToTop()" class="nav-link" href="#!/kids"><img src="images/kids.png" class="imgNavBar img-fluid rounded-circle" alt="logo du démon du jeu" width="88%" height="88%" /></a>
+            <a ng-click="scrollToTop()" class="nav-link" href="#!/kids">Enfants</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <div class="cpt">
+            <a ng-click="scrollToTop()" class="nav-link" href="#!/goodies"><img src="images/goodies.png" class="img-fluid rounded-circle imgNavBar" alt="logo du démon du jeu" width="70%" height="70%" /></a>
+            <a ng-click="scrollToTop()" class="nav-link" href="#!/goodies">Produits dérivés</a>
+          </div>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <button ng-disabled="!cart.length" ng-click="total(product)" class="btn-primary btn-panier my-2 my-sm-0 mx-auto" data-toggle="modal" data-target="#cartModal" type="submit" title="Voir votre panier"><i class="fas fa-shopping-cart"></i>
+          Panier <span class="rounded-circle bg-light w-100 h-100"> {{ + productTotalQuantity()}} </span></button>
+      </form>
+    </div>
+  </nav>
+  <!-- Fin de la navbar -->
+
+
+  <!-- Début du caroussel -->
+
+  <div class="bd-example">
+    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="4"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <a href="https://www.youtube.com/watch?v=uKQAcu5a8Qk" title="Cliquez pour voir la démo en vidéo" target="_blank"><img src="images/caroussel1.jpg" class="d-block w-100 img-fluid" alt="..."></a>
+          <div class="carousel-caption d-none d-md-block rounded font-weight-bolder">
+            <h5>Imhotep - Les Bâtisseurs D'Egypte</h5>
+            <p>Saurez-vous être à la hauteur de son uvre en construisant des monuments pour la postérité ?</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <a href="https://www.youtube.com/watch?v=p9WkxP4wldg" title="Cliquez pour voir la démo en vidéo" target="_blank"><img src="images/caroussel2.jpg" class="d-block w-100 img-fluid" alt="..."></a>
+          <div class="carousel-caption d-none d-md-block rounded font-weight-bolder">
+            <h5>Chronicles Of Crime - Edition Classique</h5>
+            <p>Chronicles of Crime est un jeu coopératif d'investigation criminelle pour 1 à 4 joueurs alliant Jeu de plateau, application numérique et réalité virtuelle.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <a href="https://www.youtube.com/watch?time_continue=45&v=dqXZZ-GriU8" title="Cliquez pour voir la démo en vidéo" target="_blank"><img src="images/caroussel3.jpg" class="d-block w-100 img-fluid" alt="..."></a>
+          <div class="carousel-caption d-none d-md-block rounded font-weight-bolder">
+            <h5>Black Rose Wars Vf</h5>
+            <p>Dans Black Rose Wars, chaque joueur incarne un des puissants Mages engagé dans la lutte décennale pour savoir qui sera le Nouveau Grand Maître de la Loge de la Rose Noire.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <a href="https://www.youtube.com/watch?v=2XHMwgF5sws" title="Cliquez pour voir la démo en vidéo" target="_blank"><img src="images/caroussel4.jpg" class="d-block w-100 img-fluid" alt="..."></a>
+          <div class="carousel-caption d-none d-md-block rounded font-weight-bolder">
+            <h5>Space Explorers</h5>
+            <p>Embarquez-vous dans la course spatiale où la concurrence est rude ! Une ode à la nostalgie dans un jeu de combinaisons dynamique et calculatoire ! </p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <a href="https://www.youtube.com/watch?v=ISBmaayR3oo" title="Cliquez pour voir la démo en vidéo" target="_blank"><img src="images/caroussel5.jpg" class="d-block w-100 img-fluid" alt="..."></a>
+          <div class="carousel-caption d-none d-md-block rounded font-weight-bolder">
+            <h5>Voyages En Terre Du Milieu</h5>
+            <p>Avec une campagne passionnante proposant de nombreux embranchements narratifs, des quêtes aux multiples facettes et un système de génération aléatoire du plateau de jeu...</p>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+  <!-- Fin du caroussel -->
+
+
+
+
+
+
+
+  <!-- Affichage de home.html (présentation de la boutique) -->
+
+  <div ng-view>
+  </div>
+
+
+
+  <!-- Modal panier -->
+
+  <!-- Modal -->
+  <form name="Cart">
+    <div ng-controller="articlesCtrl" class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div id="wallPaperModal" class="modal-content">
+          <div class="modal-header border-none">
+            <div class="mx-auto">
+              <h4 class="modal-title text-center font-weight-bolder" id="exampleModalLabel">Votre panier</h4>
+
+              <hr class="mt-4 d-inline-block text-center" />
+
+              <div id="deliver" class="text-white text-center">Livraison gratuite dès 65€ d'achats. Profitez-en !</div>
+              <p>
+                <hr class="mt-1 d-inline-block mx-auto" />
+              </p>
+            </div>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+
+            <li id="item" class="modal-body" ng-repeat="product in cart">
+              <div class="mx-auto">
+                <h4 class="text-center"> {{ product.name}}</h4>
+                <img src={{product.img}} title={{product.name}} alt={{product.name}} style="width:50%;" /> {{product.ref}} <a ng-click="removeArticle(product)" name="button" title="Supprimer l'article"><i class="fas fa-trash-alt fa-2x"></i></a>
+              </div>
+              <div class="text-center">
+                <span class="float-left">
+                  {{product.price}} €
+                </span>
+                <span class="text-center">
+                  <a ng-click="product.quantity = product.quantity - 1; oneLess(product); product.quantity ? '0' : removeArticle(product)" name="button" title="Enlever un article"><i class="fas fa-minus-circle fa-2x"></i></a>
+                  <span class="Quantity">
+                    {{product.quantity}}
+                  </span>
+                  <a ng-click="product.quantity = product.quantity + 1; oneMore(product)" name="button" title="Ajouter un article"><i class="fas fa-plus-circle fa-2x"></i></a>
+                </span>
+                <span class="float-right">
+                  {{product.totalPrice}} €
+                </span>
+            </li>
+
+
+          </div>
+          <div class="modal-body">
+            <p>
+              <hr class="mb-4 mt-0 d-inline-block mx-auto" />
+            </p>
+            <label for="country" class="ml-auto larger">Frais de port : </label>
+
+            <form name="taxForm" action="index.html" method="post">
+
+              <select name="country" id="country" title="Choisissez votre région" ng-model="selectCountry" required>
+                <optgroup label="U.E.">U.E.</option>
+                  <option value="6.90">France métropolitaine</option>
+                  <option value="13.90">Allemagne, Belgique, Luxembourg, Pays-Bas</option>
+                  <option value="15.90">Espagne, Italie, Royaume-Uni, Suisse</option>
+                  <option value="17.90">Autriche, Danemark, Irlande, Portugal</option>
+                  <option value="19.90">Finlande, Norvège, Suède</option>
+                <optgroup label="Autre">Autre</option>
+                  <option value="49.90">Dom-tom</option>
+                  <option value="49.90">Autres pays</option>
+
+              </select>
+              {{selectCountry}} €
+            </form>
+            <p><br />
+              <hr class="mb-4 mt-0 d-inline-block mx-auto" />
+            </p>
+            <div class="text-right">
+              <p>Total : {{finalAmount()}} €</p>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+
+            <button type="button" ng-click="keepOn()" class="keepShopping btn btn-secondary" data-dismiss="modal">Continuer mes achats</button>
+            <button type="button" data-toggle="modal" data-target="#validationModal" class="pay btn" ng-disabled="Cart.$invalid">Valider ma commande</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </form>
+
+
+
+  <div class="modal" id="validationModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <li class="text-white"><label class="text-white">Civilité : </label> <select name="Civilité" id="Civilité">
+              <option value="Madame">Madame</option>
+              <option value="Monsieur">Monsieur</option>
+
+
+            </select>
+          </li>
+
+          <li class="text">Nom* : <input id="lastName" type="text" name="Nom" placeholder="Nom" /></li>
+
+          <li class="text">Prénom* : <input id="firstName" type="text" name="Prénom" placeholder="Prénom" /></li>
+
+          <li class="text"><label for="choice" class="text">Date de naissance : </label> <input type="date" id="date" placeholder="xx/xx/xxxx" /></li>
+
+          <li class="text"><label for="phone" class="text">Votre adresse email* : </label> <input type="email" id="mail" ng-model="email" placeholder="Adresse mail" /></li>
+
+          <li class="text">Type de carte bancaire :
+
+            <input type="radio" id="VISA" name="Carte" value="VISA" />
+            <img src="images/Visa.png" alt="carte visa" width="15%" height="15%" title="Visa"></img>
+            <input type="radio" id="Mastercard" name="Carte" value="Mastercard" />
+            <img src="images/mastercard.png" alt="master card" width="15%" height="15%" title="Mastercard"></img>
+            <input type="radio" id="Paypal" name="Carte" value="Paypal" />
+            <a href="https://www.paypal.com/fr/signin" target="_blank"><i class="fab fa-cc-paypal fa-3x" title="Paypal"></i></a>
+
+          </li>
+
+          <li class="text">Numéro de carte* : <input id="cardNumber" type="text" placeholder="xxxxxxxxxxxx" title="Sans espace" /></li>
+          <li class="text">Date de validité* :
+            <select name="months" id="months">
+              <option value="Janvier">01-Janvier</option>
+              <option value="Février">02-Février</option>
+              <option value="Mars">03-Mars</option>
+              <option value="Avril">04-Avril</option>
+              <option value="Mai">05-Mai</option>
+              <option value="Juin">06-Juin</option>
+              <option value="Juillet">07-Juillet</option>
+              <option value="Août">08-Août</option>
+              <option value="Septembre">09-Septembre</option>
+              <option value="Octobre">10-Octobre</option>
+              <option value="Novembre">11-Novembre</option>
+              <option value="Décembre">12-Décembre</option>
+            </select>
+
+            <select name="year" id="year">
+              <option value="2019">2019</option>
+              <option value="2020">2020</option>
+              <option value="2021">2021</option>
+              <option value="2022">2022</option>
+              <option value="2023">2023</option>
+              <option value="2024">2024</option>
+              <option value="2025">2025</option>
+              <option value="2026">2026</option>
+              <option value="2027">2027</option>
+              <option value="2028">2028</option>
+              <option value="2029">2029</option>
+              <option value="2030">2030</option>
+            </select>
+          </li>
+          <li class="text">Code de sécurité* : <input id="cryptoCB" type="text" placeholder="xxx" /></li>
+          <p id="formInfo" class="text"><br /><br />* champs obligatoires</p>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+          <button type="button" ng-click="stop()" class="btn btn-primary">Payer</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Footer -->
+  <footer>
+    <!--Footer Monster-->
+
+    <div class="row no-gutters">
+
+      <div class="col-12 mx auto text-center separatorDemon mt-4">
+        <p><i class="fab fa-optin-monster fa-3x color-red"></i></p>
+      </div>
+    </div>
+
+
+    <div class="container mt-5 mb-4 text-center text-md-left">
+      <div class="row mt-3">
+
+        <!--Boutique column-->
+        <div class="text-center col-12 col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
+          <h6 class="footer-title">Le démon du jeu</h6>
+          <hr class="mb-4 mt-0 d-inline-block mx-auto" />
+
+          <!--Google Map-->
+          <div class="map-responsive">
+            <iframe id="map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2591.624923988113!2d0.10635953213743149!3d49.491591685329794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e02f21edc39467%3A0x2488e4f62f905774!2s140+Rue+Victor+Hugo%2C+76600+Le+Havre!5e0!3m2!1sfr!2sfr!4v1557408396151!5m2!1sfr!2sfr"
+              width="300" height="275" frameborder="0" style="border:0" allowfullscreen></iframe>
+          </div>
+          <!--/.Google Map-->
+
+        </div>
+        <!--/.Boutique column-->
+
+        <!--Info column-->
+        <div class="col-md-3 col-lg-3 col-xl-3" id="infoColumn">
+          <h6 class="footer-title">Autres Informations</h6>
+          <hr class="mb-4 mt-0 d-inline-block mx-auto" />
+          <p>
+            <i class="fas fa-home fa-2x mr-2 footer-legis"></i> 140, rue Victor Hugo<br />
+            <i class="fas fa-home fa-2x mr-2 footer-legis text-white"></i> 76600, Le Havre</p>
+          <p>
+            <i class="fas fa-envelope fa-2x mr-2 footer-legis"></i><a href="https://m.me/LEDEMONDUJEU?fbclid=IwAR1SN_3Z134QRe23Fe6OEOWy72IOe_UF1JigW3Pti5rSS681qOuk_FZvXyA" target="_blank">Me contacter</a></p>
+          <p>
+            <i class="fas fa-phone fa-2x mr-2 footer-legis"></i>+33 2 35 41 71 91</p>
+          <p>
+            <a href="https://www.facebook.com/LEDEMONDUJEU?fref=ts" target="_blank"><i class="fab fa-facebook fa-2x mr-2 footer-legis"></i>Visitez ma page</a></p>
+        </div>
+        <!--/.Info column-->
+
+        <!--Mentions column-->
+        <div class="text-center col-12 col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
+          <h6 class="footer-title">Mentions Légales</h6>
+          <hr class="mb-4 mt-0 d-inline-block mx-auto" />
+          <li class="footer-legis mb-4 mt-0"><a ng-click="scrollToTop()" href="#!/conditions">Conditions Générales de Vente</a></li>
+          <li class="footer-legis mb-4 mt-0"><a ng-click="scrollToTop()" href="#!/delivery">Livraison et tarifs</a></li>
+          <li class="footer-legis mb-4 mt-0"><a ng-click="scrollToTop()" href="#!/retract">Retour de produits</a></li>
+          <li class="footer-legis mb-4 mt-0"><a ng-click="scrollToTop()" href="#!/legal">Mentions Légales</a></li>
+        </div>
+        <!--/.Mentions column-->
+
+
+        <!--Paiement-->
+        <div class="text-center col-12 col-md-3 col-lg-3 col-xl-3">
+          <h6 class="footer-title">Vos moyens de paiement :</h6>
+          <hr class="mt-0 d-inline-block" />
+          <p>
+            <i class="fab fa-cc-mastercard fa-3x" title="Master Card" aria-hidden="true"></i>
+            <i class="fab fa-cc-visa fa-3x" title="Visa"></i>
+            <a href="https://www.paypal.com/fr/signin" target="_blank"><i class="fab fa-cc-paypal fa-3x" title="Paypal"></i></a></p>
+          <div class="rem"></div>
+        </div>
+
+      </div>
+    </div>
+    <!--/.Paiement-->
+
+    <!--/.Fourth column-->
+
+
+    <!--/.Footer Links-->
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3 w-100 text-white font-weight-bolder">© Mai 2019 Copyright | Paul, Damien, Dorian et Martin, Promo 2 de <a href="https://lamanu.fr/le-havre" class="text-white" target="_blank"
+        title="Cliquez pour voir">La Manu du Havre.</a></div>
+    <!-- Copyright -->
+
+  </footer>
+  <!--/.Footer-->
+
+
+
+
+
+  <!-- CDN JavaScript toujours à la fin du body pour éviter les bug -->
+  <!-- D'abord le CDN de JQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <!-- Puis le CDN du Popper.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <!-- Et enfin le CDN de Bootstrap.js -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <!-- Sweet alert 2 -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+  <!-- Lien avec la page JS (toujours après les CDN de JQuery/AngularJs) -->
+  <script src="demon.js"></script>
+</body>
+
+
+
+</html>
